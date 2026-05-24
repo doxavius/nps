@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   Park,
   LivePark,
@@ -22,6 +22,15 @@ type Props = {
 };
 
 export function Sidebar({ park, isOpen, onClose }: Props) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  // Reset scroll to top on every open and on park change.
+  useEffect(() => {
+    if (!isOpen) return;
+    const el = scrollRef.current;
+    if (el) el.scrollTop = 0;
+  }, [isOpen, park?.id]);
+
   return (
     <aside
       aria-hidden={!isOpen}
@@ -29,7 +38,7 @@ export function Sidebar({ park, isOpen, onClose }: Props) {
       style={{ transform: isOpen ? 'translateX(0)' : 'translateX(100%)' }}
     >
       {park && park.status === 'live' && (
-        <LiveContent park={park} onClose={onClose} />
+        <LiveContent park={park} onClose={onClose} scrollRef={scrollRef} />
       )}
       {park && park.status === 'draft' && (
         <DraftView park={park} onClose={onClose} />
@@ -43,12 +52,14 @@ export function Sidebar({ park, isOpen, onClose }: Props) {
 function LiveContent({
   park,
   onClose,
+  scrollRef,
 }: {
   park: LivePark;
   onClose: () => void;
+  scrollRef: React.RefObject<HTMLDivElement>;
 }) {
   return (
-    <div className="flex h-full flex-col overflow-y-auto bg-bone pb-5">
+    <div ref={scrollRef} className="flex h-full flex-col overflow-y-auto bg-bone pb-5">
       <Hero park={park} onClose={onClose} />
       <TitleBlock park={park} />
       <IdentitySection park={park} />

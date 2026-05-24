@@ -1548,15 +1548,15 @@ export const parks: Park[] = [
     name: 'Hemis National Park',
     state: 'Ladakh',
     region: 'North India',
-    oneLiner: "South Asia's largest national park: a high-altitude cold desert at 5000m",
+    oneLiner: 'The best place on Earth to see a snow leopard in the wild',
     description:
-      "Named after the 400-year-old Hemis Monastery, this is the single best place on Earth to see a snow leopard in the wild. The park stretches from the banks of the Indus River up through alpine steppe, glacial valleys, and barren peaks. Six villages, roughly 1,600 people, and a whole lot of nothing else.",
-    tags: ['expedition', 'photography', 'wildlife'],
+      "South Asia's largest national park, 4,400 km² of high-altitude cold desert along the Zanskar Range. Named after the 400-year-old Hemis Monastery. A 2025 study recorded a snow leopard density of 2.07 per 100 km² here, the highest anywhere on Earth. Six villages and roughly 1,600 people live within its boundaries, coexisting with wildlife at extreme altitude. India's only national park lying entirely north of the Great Himalayan range.",
+    tags: ['wildlife', 'trekking', 'expedition'],
     heroImage: '/images/hemis.jpg',
     unescoStatus: false,
     permitRequired: true,
     permitDescription:
-      'Winter visits (Dec-Mar) need a special permit from the Wildlife Office in Leh.',
+      'Permits required from the Wildlife Office in Leh. Winter visits also require experienced guides.',
 
     established: 1981,
     areaKm2: 4400,
@@ -1565,33 +1565,51 @@ export const parks: Park[] = [
     recommendedDays: 4,
     nearestCity: 'Leh',
     nearestCityDistKm: 50,
-    coordinates: { lat: 33.67, lng: 77.6 },
+    coordinates: { lat: 33.983, lng: 77.433 },
 
     scores: {
-      wildlife: { score: 9, desc: 'Snow leopard near-guaranteed in winter' },
-      scenic: { score: 10, desc: 'Cold desert, 6,000m peaks' },
-      accessibility: { score: 4, desc: 'Fly to Leh, then taxi and walk' },
-      crowdLevel: { score: 9, desc: "You'll often be alone" },
-      remoteness: { score: 9, desc: 'No roads inside, multi-day treks' },
-      infrastructure: { score: 3, desc: 'Basic homestays only' },
+      wildlife: {
+        score: 7,
+        desc: 'Highest snow leopard density on Earth, but sightings need winter trips and luck',
+      },
+      scenic: {
+        score: 10,
+        desc: 'Vast cold desert valleys, U-shaped glacial gorges, 6,000 m peaks',
+      },
+      accessibility: {
+        score: 3,
+        desc: 'Fly to Leh, then hours of driving plus multi-day treks',
+      },
+      crowdLevel: {
+        score: 8,
+        desc: 'Very few visitors, especially in winter tracking season',
+      },
+      remoteness: {
+        score: 9,
+        desc: 'High-altitude cold desert with no roads inside the park',
+      },
+      infrastructure: {
+        score: 3,
+        desc: 'Village homestays, no lodges, no vehicles inside the park',
+      },
     },
 
-    bestMonths: [5, 10] as [number, number],
-    speciality: 'snow leopards',
+    bestMonths: [7, 9] as [number, number],
+    speciality: 'snow leopard',
     specialityMonths: [12, 3] as [number, number],
     seasonProse:
-      'Open May to October for trekking. For snow leopards, come in winter when they descend into the lower valleys. Winter requires special permits from the Wildlife Office in Leh.',
+      'Two distinct seasons. May to October is open for trekking, with July to September offering the warmest weather and clearest trails. December to March is snow leopard season, when the cats descend into lower valleys following bharal herds. Winter visits require special permits, experienced guides, and tolerance for sub-zero temperatures. The Markha Valley trek is the most popular summer route.',
 
     trivia: [
-      'Highest density of snow leopards on Earth: 2.07 per 100 sq km, roughly 120 individuals. No other protected area comes close. The Rumbak Valley alone accounts for a significant chunk of sightings, and researchers have tracked individual cats here for over two decades.',
-      "India's only national park lying entirely north of the Great Himalayan range. Everything about the ecology here is closer to Central Asia than to the rest of India. The species, the vegetation, the soil, the air. Cross the Himalayas and you're in a different biological world entirely.",
-      "The Hemis Monastery inside the park is 400 years old, founded in 1630 by Stagsang Raspa Nawang Gyatso. It was a stop on the Silk Route to Tibet and remains Ladakh's largest monastic institution. Every June or July it hosts a masked dance festival that draws hundreds into the park.",
+      'A 2025 study (Raina et al., PLoS ONE) documented 2.07 snow leopards per 100 km² in Hemis, the highest density ever recorded for the species anywhere.',
+      "Hemis is India's only national park entirely north of the Great Himalayan range. Ecologically, it is closer to Central Asia than to the rest of India.",
+      'The Hemis Monastery hosts the annual Hemis Tsechu festival in June or July, featuring masked dances and the unfurling of a giant thangka every 12 years.',
     ],
 
-    climate: ['cold-desert', 'alpine'],
-    terrain: ['mountainous', 'gorge'],
+    climate: ['cold-desert'],
+    terrain: ['mountainous', 'plateau'],
     landscapeProse:
-      'High-altitude cold desert and alpine steppe. Juniper scrub, birch, and willow cling to the river courses. Above that: barren ridges, glacial valleys, the Indus gorge, and snowbound peaks past 6,000 m. Over 90% of precipitation falls as snow.',
+      "Bare brown ridges and U-shaped glacial valleys with almost no tree cover. Vegetation is sparse: juniper, dry birch, and alpine scrub at lower elevations, giving way to barren rock and scree above 4,500 m. The Indus river runs along the northern boundary. Rainfall is minimal, under 100 mm per year, as the park sits in the rain shadow of the Himalayas. In winter, snow covers the valleys and the landscape turns monochrome. The scale is immense and the silence is absolute.",
     landscapeImages: [
       '/images/hemis-landscape-1.jpg',
       '/images/hemis-landscape-2.jpg',
@@ -1599,17 +1617,19 @@ export const parks: Park[] = [
     ],
 
     flagshipFauna: 'Snow Leopard',
-    sightingProb: 'near-guaranteed',
-    birdingQuality: 'Good',
+    sightingProb: 'rare',
+    birdingQuality: 'Mediocre',
     animalSpecies: 16,
     birdingSpecies: 73,
     wildlifeProse:
-      'The snow leopard is the headliner, but the supporting cast is strong: bharal, Tibetan wolf, Eurasian brown bear, Asiatic ibex, Himalayan marmot, and the shapu, found nowhere else in India. Best spotted on early-morning hikes through the Rumbak and Markha catchments.',
+      "Around 91 snow leopards estimated within the park (2025 study), with Rumbak valley being the most reliable sighting area. Winter tracking trips with experienced guides and spotting scopes offer roughly 50 to 60% success rates over a week-long stay. Bharal (blue sheep) herds of 30 to 50 are common on open slopes and are the primary prey species. Shapu (Ladakhi urial) survives here and almost nowhere else. Tibetan wolf, Eurasian brown bear, Asiatic ibex, red fox, Himalayan marmot, and Pallas's cat complete the mammal list. Birding is limited to 73 species but includes golden eagle, lammergeier, Himalayan griffon, Tibetan snowcock, and robin accentor.",
     wildlifeCards: [
       { name: 'Snow Leopard', image: '/images/hemis-wildlife-snow-leopard.jpg' },
       { name: 'Bharal', image: '/images/hemis-wildlife-bharal.jpg' },
+      { name: 'Shapu', image: '/images/hemis-wildlife-shapu.jpg' },
       { name: 'Tibetan Wolf', image: '/images/hemis-wildlife-tibetan-wolf.jpg' },
       { name: 'Golden Eagle', image: '/images/hemis-wildlife-golden-eagle.jpg' },
+      { name: 'Himalayan Marmot', image: '/images/hemis-wildlife-himalayan-marmot.jpg' },
     ],
 
     safari: {
@@ -1618,12 +1638,11 @@ export const parks: Park[] = [
       coreZoneAccess: 'Yes',
       density: 'Low',
       prose:
-        'No formal jeep safari. This is a trekking park. Four entry checkpoints. All exploration is on foot with a local guide.',
+        'No vehicles allowed inside the park. All exploration is on foot, with multi-day treks between valleys. Summer treks follow the Markha Valley route (4 to 8 days). Winter snow leopard tracking is based out of Rumbak or Ulley villages, with daily hikes to scanning points. Permits required from the Wildlife Office in Leh. Checkposts at Skiu, Zingchen, and Shang Sumdo regulate entry.',
       gates: [
-        { name: 'Stok', qualifier: 'closest to Leh' },
-        { name: 'Zingchen' },
-        { name: 'Martselang' },
-        { name: 'Chilling' },
+        { name: 'Zingchen', qualifier: 'Rumbak valley access' },
+        { name: 'Skiu', qualifier: 'Markha Valley trek start' },
+        { name: 'Shang Sumdo' },
       ],
     },
 
@@ -1632,18 +1651,30 @@ export const parks: Park[] = [
     entryFeeINR: 20,
     entryFeeForeigner: 100,
     practicalProse:
-      'No mobile coverage inside the park. Homestays in villages along trekking routes. Carry everything you need from Leh, including cash.',
+      'Acclimatize in Leh for at least 2 days before entering the park. AMS (acute mountain sickness) is a real risk at these altitudes. Carry all supplies, including warm sleeping bags, layered clothing, and high-calorie food. Cash only. No shops, no ATMs, no phone signal inside the park. Winter trips require down jackets rated to minus 30°C.',
 
-    connectivityProse: '50 km southeast of Leh. No vehicles inside the park. You walk in.',
+    connectivityProse:
+      '50 km from Leh. Kushok Bakula Rimpochee Airport (IXL) in Leh has daily flights from Delhi. No roads inside the park.',
     transport: [
-      { icon: 'plane', desc: 'Kushok Bakula Rimpochee Airport, Leh, 5 km from park boundary' },
-      { icon: 'train', desc: 'Jammu Tawi, 650 km away. Fly to Leh instead.' },
-      { icon: 'bus', desc: 'Daily buses to Leh from Srinagar and Manali, 1-2 days' },
-      { icon: 'car', desc: 'Drive to checkpost entrances only. No vehicles inside.' },
-      { icon: 'foot', desc: 'All exploration inside the park is on foot.' },
+      {
+        icon: 'plane',
+        desc: 'Kushok Bakula Rimpochee Airport (IXL), Leh. Daily flights from Delhi. Airport is 5 km from Leh, 50 km from park boundary.',
+      },
+      {
+        icon: 'train',
+        desc: 'No railway access. Nearest railhead is Jammu Tawi (700 km) or Chandigarh (750 km), then 2-day road journey.',
+      },
+      {
+        icon: 'bus',
+        desc: 'HPTDC and JKSRTC buses run Manali to Leh (June to September only, 2 days) via Rohtang and Tanglang La.',
+      },
+      {
+        icon: 'car',
+        desc: 'Leh to Zingchen trailhead by taxi (1.5 hours). Leh to Skiu via road only possible in summer.',
+      },
     ],
 
     photoProse:
-      'Extraordinary dawn light. Dry air gives razor-sharp visibility. Bring a 500mm+ lens for snow leopard. Rumbak Valley has the best hides. No drones.',
+      'Winter snow leopard photography demands patience, a 500-600mm lens, and a stable tripod or beanbag for long-distance scanning. Animals are typically spotted at 200 to 800 metres across a valley. Summer treks offer stunning wide-angle landscape opportunities. The Rumbak valley at dawn, with bharal silhouettes on a ridgeline and frosted peaks behind, is the classic Hemis image.',
   },
 ];

@@ -14,8 +14,10 @@ export function ParkMarker({ park, zoom, onClick }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   const isLive = park.status === 'live';
-  const baseSize = isLive ? (zoom > 8 ? 16 : 12) : (zoom > 8 ? 10 : 8);
-  const size = hover ? (isLive ? 20 : 14) : baseSize;
+  // Smooth zoom-driven scale: ~10→22 (live), ~7→16 (draft) across zoom 2→14.
+  const t = Math.max(0, Math.min(1, (zoom - 2) / 12));
+  const baseSize = isLive ? Math.round(10 + t * 12) : Math.round(7 + t * 9);
+  const size = hover ? baseSize + 4 : baseSize;
   const clickable = typeof onClick === 'function';
 
   // Native click listener: stop propagation BEFORE mapbox-gl's click listener
@@ -42,7 +44,7 @@ export function ParkMarker({ park, zoom, onClick }: Props) {
     >
       <div
         className={`rounded-full border-2 border-bone transition-all duration-200 ease-out ${
-          isLive ? 'bg-terracotta' : 'bg-slate/50'
+          isLive ? 'bg-terracotta' : 'bg-terracotta/40'
         }`}
         style={{
           width: size,

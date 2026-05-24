@@ -13,15 +13,47 @@ import { Park } from '@/types/park';
 import { ParkMarker } from './ParkMarker';
 import { Sidebar } from './Sidebar';
 
-const SIDEBAR_OFFSET_PX = -224;
-const FLY_TO_ZOOM = 8;
-const FLY_TO_DURATION = 800;
+const SIDEBAR_WIDTH_PX = 448;
+const TERRAIN_3D_ZOOM = 10.5;
+const TERRAIN_3D_PITCH = 65;
+const TERRAIN_3D_EXAGGERATION = 1.8;
+const TERRAIN_3D_FLY_DURATION = 1800;
+const ORBIT_DEG_PER_SEC = 4;
 
 export function MapView() {
   const mapRef = useRef<MapRef | null>(null);
+  const orbitRafRef = useRef<number | null>(null);
+  const orbitStartTimeoutRef = useRef<number | null>(null);
+  const cancelPendingTerrainOffRef = useRef<(() => void) | null>(null);
   const [zoom, setZoom] = useState<number>(MAP_CONFIG.initialViewState.zoom);
   const [selectedParkId, setSelectedParkId] = useState<string | null>(null);
   const [displayPark, setDisplayPark] = useState<Park | null>(null);
+
+  const stopOrbit = useCallback(() => {
+    if (orbitRafRef.current != null) {
+      cancelAnimationFrame(orbitRafRef.current);
+      orbitRafRef.current = null;
+    }
+    if (orbitStartTimeoutRef.current != null) {
+      clearTimeout(orbitStartTimeoutRef.current);
+      orbitStartTimeoutRef.current = null;
+    }
+  }, []);
+
+  const startOrbit = useCallback(() => {
+    const map = mapRef.current?.getMap();
+    if (!map) return;
+    let last = performance.now();
+    const tick = (now: number) => {
+      const m = mapRef.current?.getMap();
+      if (!m) return;
+      const dt = (now - last) / 1000;
+      last = now;
+      m.setBearing(m.getBearing() + dt * ORBIT_DEG_PER_SEC);
+      orbitRafRef.current = requestAnimationFrame(tick);
+    };
+    orbitRafRef.current = requestAnimationFrame(tick);
+  }, []);
 
   const handleLoad = useCallback(() => {
     const map = mapRef.current?.getMap();
@@ -45,6 +77,27 @@ export function MapView() {
     apply('show3dObjects', cfg.show3dObjects);
     apply('showRoadLabels', cfg.showRoadLabels);
     apply('showPlaceLabels', cfg.showPlaceLabels);
+
+    // DEM source for 3D terrain. Loaded once; setTerrain attaches/detaches it.
+    if (!map.getSource('mapbox-dem')) {
+      map.addSource('mapbox-dem', {
+        type: 'raster-dem',
+        url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
+        tileSize: 512,
+        maxzoom: 14,
+      });
+    }
+    // Subtle far-horizon fog so peaks dissolve cleanly into the bone background.
+    // range [5,15] keeps fog out of the foreground entirely; only the distance
+    // takes a slight tint. Active in both 2D and 3D — invisible at low pitch.
+    map.setFog({
+      range: [5, 15],
+      'horizon-blend': 0.03,
+      color: '#FAF7F2',
+      'high-color': '#FAF7F2',
+      'space-color': '#FAF7F2',
+      'star-intensity': 0,
+    });
   }, []);
 
   // Clicking empty map area closes the sidebar. Park markers stop propagation,
@@ -61,19 +114,71 @@ export function MapView() {
 
   // Cache park for sidebar so slide-out animation has content to render.
   useEffect(() => {
-    if (!selectedParkId) return;
+    const cancelPendingTerrainOff = () => {
+      cancelPendingTerrainOffRef.current?.();
+      cancelPendingTerrainOffRef.current = null;
+    };
+    const schedulePostMoveTerrainOff = (
+      map: ReturnType<NonNullable<typeof mapRef.current>['getMap']>,
+    ) => {
+      cancelPendingTerrainOff();
+      const handler = () => {
+        map.setTerrain(null);
+        cancelPendingTerrainOffRef.current = null;
+      };
+      map.once('moveend', handler);
+      cancelPendingTerrainOffRef.current = () => map.off('moveend', handler);
+    };
+
+    if (!selectedParkId) {
+      // Close: stop orbit, drop back to flat 2D, detach terrain after settle.
+      stopOrbit();
+      const map = mapRef.current?.getMap();
+      if (!map) return;
+      if (map.getPitch() > 0 || map.getBearing() !== 0) {
+        map.easeTo({
+          pitch: 0,
+          bearing: 0,
+          padding: { top: 0, right: 0, bottom: 0, left: 0 },
+          duration: 1000,
+        });
+        schedulePostMoveTerrainOff(map);
+      } else {
+        cancelPendingTerrainOff();
+        map.setTerrain(null);
+      }
+      return;
+    }
     const p = parks.find((park) => park.id === selectedParkId) ?? null;
     if (!p) return;
     setDisplayPark(p);
     const map = mapRef.current?.getMap();
     if (!map) return;
+
+    stopOrbit();
+    cancelPendingTerrainOff();
+    map.setTerrain({ source: 'mapbox-dem', exaggeration: TERRAIN_3D_EXAGGERATION });
     map.flyTo({
       center: [p.coordinates.lng, p.coordinates.lat],
-      zoom: FLY_TO_ZOOM,
-      offset: [SIDEBAR_OFFSET_PX, 0],
-      duration: FLY_TO_DURATION,
+      zoom: TERRAIN_3D_ZOOM,
+      pitch: TERRAIN_3D_PITCH,
+      bearing: 0,
+      padding: { top: 0, right: SIDEBAR_WIDTH_PX, bottom: 0, left: 0 },
+      duration: TERRAIN_3D_FLY_DURATION,
     });
-  }, [selectedParkId]);
+    // Start orbit after the fly settles. Stop on any user interaction.
+    orbitStartTimeoutRef.current = window.setTimeout(() => {
+      startOrbit();
+    }, TERRAIN_3D_FLY_DURATION);
+    const onUserInput = () => stopOrbit();
+    map.once('dragstart', onUserInput);
+    map.once('wheel', onUserInput);
+    map.once('rotatestart', onUserInput);
+    map.once('pitchstart', onUserInput);
+  }, [selectedParkId, startOrbit, stopOrbit]);
+
+  // Cleanup on unmount.
+  useEffect(() => stopOrbit, [stopOrbit]);
 
   // Escape closes the sidebar.
   useEffect(() => {

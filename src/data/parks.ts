@@ -175,12 +175,104 @@ export const parks: Park[] = [
     coordinates: { lat: 23.9, lng: 91.6 },
   },
   {
-    status: 'draft',
-    id: "blackbuck-velavadar",
-    name: "Blackbuck National Park, Velavadar",
-    state: "Gujarat",
-    region: "West India",
-    coordinates: { lat: 21.89, lng: 72.04 },
+    status: 'live',
+    id: 'velavadar',
+    name: 'Blackbuck National Park',
+    state: 'Gujarat',
+    region: 'West India',
+    oneLiner: "Open grasslands with India's largest blackbuck herds and the world's biggest harrier roost",
+    description:
+      'A 34 km² patch of flat coastal grassland in the Bhal region of Saurashtra, bordering the Gulf of Khambhat. Former hunting ground of the Maharaja of Bhavnagar, who ran blackbuck down with trained cheetahs. Now protects over 2,000 blackbuck, a healthy Indian wolf population, and one of the world\'s largest winter harrier roosts.',
+    tags: ['wildlife', 'birding', 'photography'],
+    heroImage: '/images/velavadar.jpg',
+    unescoStatus: false,
+    permitRequired: false,
+
+    established: 1976,
+    areaKm2: 34,
+    openMonths: [10, 6] as [number, number],
+    elevationRange: [1, 15] as [number, number],
+    recommendedDays: 1,
+    nearestCity: 'Bhavnagar',
+    nearestCityDistKm: 42,
+    coordinates: { lat: 22.033, lng: 72.050 },
+
+    scores: {
+      wildlife: { score: 7, desc: 'Blackbuck herds guaranteed, wolves seen regularly' },
+      scenic: { score: 6, desc: 'Flat open grassland, golden in winter, green in monsoon' },
+      accessibility: { score: 6, desc: 'Bhavnagar airport 65 km, Ahmedabad 170 km' },
+      crowdLevel: { score: 7, desc: 'Few visitors outside weekends and festivals' },
+      remoteness: { score: 5, desc: 'Rural Gujarat, Bhavnagar town nearby' },
+      infrastructure: { score: 5, desc: 'One good lodge, basic forest facilities, no guides' },
+    },
+
+    bestMonths: [11, 2] as [number, number],
+    speciality: 'harrier roost',
+    specialityMonths: [12, 2] as [number, number],
+    seasonProse:
+      'November to February is ideal. Blackbuck are active, migratory harriers roost in thousands, and the weather is pleasant. The harrier roost at dusk is the single best spectacle. Park closes mid-June to mid-October for monsoon breeding season.',
+
+    trivia: [
+      "One of the world's largest harrier roosts. Thousands of Montagu's, pallid, and marsh harriers gather at dusk from November to February.",
+      'The Maharaja of Bhavnagar hunted blackbuck here with trained Asiatic cheetahs, now extinct in India.',
+      'At 34 km², one of India\'s smallest national parks but one of the most important for grassland conservation.',
+    ],
+
+    climate: ['semi-arid'],
+    terrain: ['flat', 'scrubland'],
+    landscapeProse:
+      'Dead flat. Short dry grass stretching to the horizon in every direction, broken only by scattered Prosopis thorn and low acacia scrub. Southern edge meets saline mudflats and tidal wetlands along the Gulf of Khambhat. No hills, no forest, no river. In winter the grass turns golden. After monsoon it briefly flushes green. The openness is the point.',
+    landscapeImages: [
+      '/images/velavadar-landscape-1.jpg',
+      '/images/velavadar-landscape-2.jpg',
+      '/images/velavadar-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Blackbuck',
+    sightingProb: 'near-guaranteed',
+    birdingQuality: 'Exceptional',
+    animalSpecies: 14,
+    birdingSpecies: 300,
+    wildlifeProse:
+      'Blackbuck herds of 50 to 100 graze openly across the grassland. Males with spiralling horns and dark coats are easy to spot and photograph. Indian wolf is the top predator here, one of the most reliable places to see wolves in India. Striped hyena, jungle cat, Indian fox, and jackal round out the mammal list. Birding is exceptional at 300+ species, dominated by the winter harrier roost and including lesser florican, sarus crane, and a strong raptor list.',
+    wildlifeCards: [
+      { name: 'Blackbuck', image: '/images/velavadar-wildlife-blackbuck.jpg' },
+      { name: 'Indian Wolf', image: '/images/velavadar-wildlife-indian-wolf.jpg' },
+      { name: "Montagu's Harrier", image: '/images/velavadar-wildlife-montagus-harrier.jpg' },
+      { name: 'Lesser Florican', image: '/images/velavadar-wildlife-lesser-florican.jpg' },
+      { name: 'Striped Hyena', image: '/images/velavadar-wildlife-striped-hyena.jpg' },
+    ],
+
+    safari: {
+      types: ['jeep'],
+      bookingRequirement: 'No',
+      coreZoneAccess: 'Yes',
+      density: 'Low',
+      prose:
+        'Open jeep safaris on grassland tracks. No fixed zones or shifts. Enter at the main gate and drive through the park. Small enough to cover in half a day. Self-drive not allowed, hire a vehicle at the gate or through your lodge.',
+      gates: [
+        { name: 'Velavadar Gate' },
+      ],
+    },
+
+    networkQuality: 'Poor',
+    stayQuality: 'Mid-range',
+    entryFeeINR: 20,
+    entryFeeForeigner: 20,
+    practicalProse:
+      'Carry binoculars for the harrier roost. Winters are pleasant but mornings can be cold in the open jeep. No food vendors inside. Blackbuck Lodge near the gate is the only decent accommodation option.',
+
+    connectivityProse:
+      '42 km north of Bhavnagar, 170 km from Ahmedabad. On a rural road off NH-8E.',
+    transport: [
+      { icon: 'plane', desc: 'Bhavnagar Airport (BHU), 65 km. Limited domestic flights. Taxi 1.5 hours.' },
+      { icon: 'train', desc: 'Bhavnagar Terminus, 42 km. Trains from Ahmedabad and Mumbai. Taxi to park.' },
+      { icon: 'bus', desc: 'Gujarat GSRTC from Ahmedabad to Bhavnagar (4 hours). Then local taxi.' },
+      { icon: 'car', desc: 'NH-8E from Ahmedabad via Botad to Velavadar (3 hours). Flat, easy drive.' },
+    ],
+
+    photoProse:
+      'Open grassland means clean, uncluttered backgrounds for wildlife portraits. Blackbuck at golden hour with low-angle light is the signature shot. A 200-500mm lens covers most situations. The evening harrier roost, with thousands of birds descending in formation, needs a wider lens and fast shutter speed.',
   },
   {
     status: 'draft',
@@ -231,12 +323,105 @@ export const parks: Park[] = [
     coordinates: { lat: 34.09, lng: 75.05 },
   },
   {
-    status: 'draft',
-    id: "desert",
-    name: "Desert National Park",
-    state: "Rajasthan",
-    region: "West India",
-    coordinates: { lat: 26.8, lng: 70.5 },
+    status: 'live',
+    id: 'desert',
+    name: 'Desert National Park',
+    state: 'Rajasthan',
+    region: 'West India',
+    oneLiner: "India's Thar Desert wilderness, last stronghold of the great Indian bustard",
+    description:
+      "Sand dunes, rocky pavements, and salt lake beds across 3,162 km² of the Thar Desert between Jaisalmer and Barmer. One of India's largest national parks and one of the least visited. Created to protect the critically endangered great Indian bustard, now down to fewer than 150 birds in the wild. Jurassic-era fossils, 180 million years old, are scattered through the park.",
+    tags: ['birding', 'expedition', 'photography'],
+    heroImage: '/images/desert.jpg',
+    unescoStatus: false,
+    permitRequired: false,
+
+    established: 1981,
+    areaKm2: 3162,
+    openMonths: [1, 12] as [number, number],
+    elevationRange: [200, 300] as [number, number],
+    recommendedDays: 2,
+    nearestCity: 'Jaisalmer',
+    nearestCityDistKm: 40,
+    coordinates: { lat: 26.000, lng: 70.500 },
+
+    scores: {
+      wildlife: { score: 5, desc: 'Chinkara common, bustard critically rare, no large predators' },
+      scenic: { score: 7, desc: 'Rolling dunes, empty horizon, stark desert beauty' },
+      accessibility: { score: 5, desc: 'Jaisalmer airport 40 km, limited flights' },
+      crowdLevel: { score: 8, desc: 'Very few visitors, vast empty landscape' },
+      remoteness: { score: 7, desc: 'Deep Thar, nothing for hours in any direction' },
+      infrastructure: { score: 3, desc: 'Basic checkposts, no formal safari system, local guides' },
+    },
+
+    bestMonths: [11, 2] as [number, number],
+    speciality: 'great Indian bustard',
+    specialityMonths: [11, 2] as [number, number],
+    seasonProse:
+      'November to February is the only comfortable window. Daytime temperatures are pleasant and migratory raptors arrive. March to June is brutal, regularly crossing 48°C with sandstorms. The park is technically open year-round but summer visits are impractical.',
+
+    trivia: [
+      'The only place in Rajasthan where the state bird (GIB), state animal (chinkara), state tree (khejri), and state flower (rohida) all occur together.',
+      'Contains Jurassic-era fossils dating back 180 million years, including dinosaur fossils from 60 million years ago.',
+      "Seven of India's nine vulture species are found here, the highest concentration in any single Indian park.",
+    ],
+
+    climate: ['arid'],
+    terrain: ['flat', 'scrubland'],
+    landscapeProse:
+      'Sand dunes covering 44% of the park, some reaching 150 metres in height. Between the dunes: rocky pavements, dry salt lake beds, sparse Prosopis and khejri trees, and patches of desert grass. No rivers, no water bodies except seasonal rain pools. The emptiness is immense. At dawn the dunes turn gold against a pale sky. After rare monsoon rain, the desert briefly flushes green.',
+    landscapeImages: [
+      '/images/desert-landscape-1.jpg',
+      '/images/desert-landscape-2.jpg',
+      '/images/desert-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Great Indian Bustard',
+    sightingProb: 'rare',
+    birdingQuality: 'Rich',
+    animalSpecies: null,
+    birdingSpecies: 120,
+    wildlifeProse:
+      "The great Indian bustard is the reason this park exists. Fewer than 150 survive in the wild, and DNP is their last significant stronghold. Sightings are rare but possible with a knowledgeable local guide, especially around Sudashri waterhole. Chinkara graze openly across the desert. Desert fox, Indian fox, desert cat, Indian wolf, and nilgai are present. Reptiles thrive: spiny-tailed lizard, desert monitor, saw-scaled viper, and common krait. Birding is strong for raptors: seven vulture species, imperial eagle, tawny eagle, Laggar falcon, and Macqueen's bustard.",
+    wildlifeCards: [
+      { name: 'Great Indian Bustard', image: '/images/desert-wildlife-great-indian-bustard.jpg' },
+      { name: 'Chinkara', image: '/images/desert-wildlife-chinkara.jpg' },
+      { name: 'Desert Fox', image: '/images/desert-wildlife-desert-fox.jpg' },
+      { name: 'Spiny-tailed Lizard', image: '/images/desert-wildlife-spiny-tailed-lizard.jpg' },
+      { name: 'Egyptian Vulture', image: '/images/desert-wildlife-egyptian-vulture.jpg' },
+    ],
+
+    safari: {
+      types: ['jeep'],
+      bookingRequirement: 'No',
+      coreZoneAccess: 'Yes',
+      density: 'Low',
+      prose:
+        'No formal safari system. Hire a jeep and local guide from Jaisalmer or at the DNP office near Sudashri. Drive through the park on desert tracks. No fixed shifts or zones. A knowledgeable guide is essential for finding GIB habitat.',
+      gates: [
+        { name: 'Sudashri', qualifier: 'main checkpost and GIB habitat' },
+        { name: 'Sam' },
+      ],
+    },
+
+    networkQuality: 'Poor',
+    stayQuality: 'Mid-range',
+    entryFeeINR: 100,
+    entryFeeForeigner: 100,
+    practicalProse:
+      'Carry water, sunscreen, and a head covering even in winter. Summer is genuinely dangerous without preparation. No food or shops inside the park. Jaisalmer has good accommodation ranging from havelis to desert camps. Hire a local guide who knows GIB locations.',
+
+    connectivityProse:
+      '40 km from Jaisalmer. Sudashri checkpost is the main entry point for GIB habitat.',
+    transport: [
+      { icon: 'plane', desc: 'Jaisalmer Airport (JSA), 40 km. Limited flights from Delhi and Jaipur.' },
+      { icon: 'train', desc: 'Jaisalmer Railway Station, 40 km. Overnight trains from Delhi, Jodhpur, Jaipur.' },
+      { icon: 'bus', desc: 'Rajasthan RSRTC from Jodhpur (5 hours) and Jaipur (12 hours) to Jaisalmer.' },
+      { icon: 'car', desc: 'From Jodhpur via NH-15 (5 hours). From Jaisalmer, desert road to Sudashri (1 hour).' },
+    ],
+
+    photoProse:
+      "GIB in the open desert is one of India's most coveted wildlife photographs. A 500-600mm lens is essential. Dawn light on sand dunes is spectacular for landscape work. Chinkara and desert fox are cooperative subjects. The spiny-tailed lizard, basking on rocks, makes an excellent reptile portrait.",
   },
   {
     status: 'draft',
@@ -1685,12 +1870,108 @@ export const parks: Park[] = [
     coordinates: { lat: 21.44, lng: 79.26 },
   },
   {
-    status: 'draft',
-    id: "pench-mp",
-    name: "Pench National Park",
-    state: "Madhya Pradesh",
-    region: "Central India",
-    coordinates: { lat: 21.67, lng: 79.3 },
+    status: 'live',
+    id: 'pench',
+    name: 'Pench National Park',
+    state: 'Madhya Pradesh',
+    region: 'Central India',
+    oneLiner: "Kipling's Jungle Book forest, straddling Madhya Pradesh and Maharashtra",
+    description:
+      "Teak forest split down the middle by the Pench river, spreading across the Madhya Pradesh-Maharashtra border. Kipling set The Jungle Book in these forests. The highest herbivore density of any Indian tiger reserve (90 animals per km²), which makes it excellent predator country. BBC filmed 'Spy in the Jungle' here in 2008, following the legendary tigress Collarwali.",
+    tags: ['wildlife', 'families', 'photography'],
+    heroImage: '/images/pench.jpg',
+    unescoStatus: false,
+    permitRequired: false,
+
+    established: 1983,
+    areaKm2: 293,
+    openMonths: [10, 6] as [number, number],
+    elevationRange: [425, 620] as [number, number],
+    recommendedDays: 2,
+    nearestCity: 'Seoni',
+    nearestCityDistKm: 35,
+    coordinates: { lat: 21.672, lng: 79.303 },
+
+    scores: {
+      wildlife: { score: 8, desc: 'High tiger and prey density, good leopard sightings' },
+      scenic: { score: 6, desc: 'Pleasant teak forest, nothing dramatic for landscape' },
+      accessibility: { score: 7, desc: 'Nagpur airport 90 km, easy 2-hour drive' },
+      crowdLevel: { score: 5, desc: 'Popular but less hectic than Kanha or Bandhavgarh' },
+      remoteness: { score: 5, desc: 'Turia village has resort clusters, near NH-44' },
+      infrastructure: { score: 7, desc: 'Online booking, multiple zones, walking and night safaris' },
+    },
+
+    bestMonths: [11, 3] as [number, number],
+    speciality: 'prey density',
+    specialityMonths: [3, 5] as [number, number],
+    seasonProse:
+      'November to March is comfortable with good sightings. March to May is hot but tiger visibility peaks as vegetation thins and water shrinks. Closed July to mid-October for monsoon. Wednesday is the weekly off for core zones.',
+
+    trivia: [
+      'Highest herbivore density of any Indian tiger reserve at 90.3 animals per km². More prey means more predator action.',
+      "Collarwali, Pench's most famous tigress, raised 29 cubs in her lifetime and was the star of BBC's 'Spy in the Jungle'.",
+      'Straddles two states. MP side has 3 core gates and 4 buffer zones. Maharashtra side has 6 gates.',
+    ],
+
+    climate: ['subtropical'],
+    terrain: ['hilly', 'dense-forest'],
+    landscapeProse:
+      'Open-canopy teak forest with considerable ground cover and grassy clearings. The Pench river runs north to south, splitting the park into eastern and western halves. Low undulating hills, not steep. In summer the deciduous canopy thins to bare branches and golden leaf litter. The Meghdoot dam creates a reservoir that draws wildlife in the dry months.',
+    landscapeImages: [
+      '/images/pench-landscape-1.jpg',
+      '/images/pench-landscape-2.jpg',
+      '/images/pench-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Bengal Tiger',
+    sightingProb: 'likely',
+    birdingQuality: 'Rich',
+    animalSpecies: 39,
+    birdingSpecies: 325,
+    wildlifeProse:
+      'Around 70 to 75 tigers across both state sides. Sighting probability is good, helped by open canopy and high prey density. Chital and sambar in enormous herds. Leopards are regularly seen, especially in buffer zones. Dhole packs hunt through the teak corridors. Gaur, nilgai, wild boar, and four-horned antelope complete the herbivore list. Birding is rich at 325 species, with Malabar pied hornbill, osprey, grey-headed fish eagle, Indian pitta, and white-eyed buzzard.',
+    wildlifeCards: [
+      { name: 'Bengal Tiger', image: '/images/pench-wildlife-bengal-tiger.jpg' },
+      { name: 'Indian Leopard', image: '/images/pench-wildlife-indian-leopard.jpg' },
+      { name: 'Dhole', image: '/images/pench-wildlife-dhole.jpg' },
+      { name: 'Gaur', image: '/images/pench-wildlife-gaur.jpg' },
+      { name: 'Malabar Pied Hornbill', image: '/images/pench-wildlife-malabar-pied-hornbill.jpg' },
+      { name: 'Chital', image: '/images/pench-wildlife-chital.jpg' },
+    ],
+
+    safari: {
+      types: ['jeep', 'walking', 'cycle'],
+      bookingRequirement: 'Yes',
+      coreZoneAccess: 'Yes',
+      density: 'Moderate',
+      prose:
+        'Three core gates on the MP side: Turia, Karmajhiri, and Jamtara. Buffer zones offer night safaris, walking safaris, and cycling. Morning and evening jeep shifts. Book through mponline.gov.in for MP gates or Maharashtra Forest Department for Sillari and Khursapar gates.',
+      gates: [
+        { name: 'Turia Gate', qualifier: 'main entry, MP core zone' },
+        { name: 'Karmajhiri Gate' },
+        { name: 'Jamtara Gate' },
+        { name: 'Sillari Gate', qualifier: 'Maharashtra side' },
+      ],
+    },
+
+    networkQuality: 'Decent',
+    stayQuality: 'Luxury',
+    entryFeeINR: 2000,
+    entryFeeForeigner: 5000,
+    practicalProse:
+      'Carry warm layers for winter mornings. Summer crosses 45°C. Cash useful in Turia village. Night safari in the buffer zones is a unique Pench offering not available in most MP parks. Combine with Kanha (200 km, 3.5 hours) for a two-park itinerary.',
+
+    connectivityProse:
+      '35 km from Seoni, 90 km from Nagpur. Main tourism area around Turia gate on NH-44.',
+    transport: [
+      { icon: 'plane', desc: 'Nagpur Airport (NAG), 90 km. Domestic and limited international. Taxi 2 hours.' },
+      { icon: 'train', desc: 'Seoni station, 35 km. Or Nagpur Junction, 90 km, with wider connectivity.' },
+      { icon: 'bus', desc: 'State buses from Nagpur and Jabalpur stop at Turia on NH-44.' },
+      { icon: 'car', desc: 'NH-44 from Nagpur (2 hours) or Jabalpur (4 hours). Well-maintained highway.' },
+    ],
+
+    photoProse:
+      'Open teak canopy gives cleaner light than denser sal forests. Chital herds in golden leaf litter make strong compositions. A 200-400mm lens covers most tiger situations. The Pench river crossing at dawn is a classic landscape shot.',
   },
   {
     status: 'live',
@@ -2095,12 +2376,104 @@ export const parks: Park[] = [
     coordinates: { lat: 25.15, lng: 94.47 },
   },
   {
-    status: 'draft',
-    id: "silent-valley",
-    name: "Silent Valley National Park",
-    state: "Kerala",
-    region: "South India",
-    coordinates: { lat: 11.08, lng: 76.43 },
+    status: 'live',
+    id: 'silent-valley',
+    name: 'Silent Valley National Park',
+    state: 'Kerala',
+    region: 'South India',
+    oneLiner: "One of India's last undisturbed tropical rainforests, saved by a protest movement",
+    description:
+      'Undisturbed tropical evergreen rainforest in the Nilgiri Hills, named for the eerie absence of cicada calls. Saved from a hydroelectric dam by India\'s fiercest environmental campaign in the 1970s. Core of the Nilgiri Biosphere Reserve. Holds the largest population of lion-tailed macaques, one of the most endangered primates on Earth.',
+    tags: ['wildlife', 'birding', 'expedition'],
+    heroImage: '/images/silent-valley.jpg',
+    unescoStatus: true,
+    permitRequired: false,
+
+    established: 1984,
+    areaKm2: 90,
+    openMonths: [1, 12] as [number, number],
+    elevationRange: [900, 2383] as [number, number],
+    recommendedDays: 1,
+    nearestCity: 'Mannarkkad',
+    nearestCityDistKm: 40,
+    coordinates: { lat: 11.133, lng: 76.467 },
+
+    scores: {
+      wildlife: { score: 6, desc: 'Lion-tailed macaques reliable, larger mammals elusive' },
+      scenic: { score: 8, desc: 'Dense rainforest canopy, mist, Kunthipuzha river valley' },
+      accessibility: { score: 5, desc: 'Coimbatore airport 120 km, then winding hill roads' },
+      crowdLevel: { score: 7, desc: 'Visitor numbers actively restricted by forest department' },
+      remoteness: { score: 6, desc: 'Mukkali is a small settlement, Mannarkkad 40 km' },
+      infrastructure: { score: 5, desc: 'Guided jeep trips, nature trail, basic visitor centre' },
+    },
+
+    bestMonths: [12, 4] as [number, number],
+    speciality: 'lion-tailed macaque',
+    specialityMonths: [12, 3] as [number, number],
+    seasonProse:
+      'December to April is best. Post-monsoon forest is lush, humidity is manageable, and macaque troops are active and visible. Monsoon (June to September) brings 3,000-4,500 mm of rain and difficult trail conditions. Open year-round but entry closes at 1 PM daily.',
+
+    trivia: [
+      'Named for the near-absence of cicada noise. Theories range from altitude to dense canopy blocking wind vibrations.',
+      "The 'Save Silent Valley' campaign (1973-1985) stopped a hydroelectric dam and became a landmark in Indian environmental history.",
+      'Contains 1,000 flowering plant species, 108 orchid species, and 500 butterfly and moth species in just 90 km².',
+    ],
+
+    climate: ['tropical-wet'],
+    terrain: ['mountainous', 'dense-forest'],
+    landscapeProse:
+      'Unbroken tropical evergreen canopy from 900 m up to the Anginda peak at 2,383 m. Steep escarpments and narrow ridges covered in moss, ferns, and epiphytes. The Kunthipuzha river runs through the valley, clear and cold. In monsoon, waterfalls appear on every rock face. Mist sits in the valleys most mornings and burns off by noon. The forest floor is dark even at midday.',
+    landscapeImages: [
+      '/images/silent-valley-landscape-1.jpg',
+      '/images/silent-valley-landscape-2.jpg',
+      '/images/silent-valley-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Lion-tailed Macaque',
+    sightingProb: 'likely',
+    birdingQuality: 'Good',
+    animalSpecies: 34,
+    birdingSpecies: 211,
+    wildlifeProse:
+      'Lion-tailed macaque troops swing through the mid-canopy of Cullenia and Palaquium trees, their silver manes visible against dark fur. Largest population of this species anywhere. Nilgiri langur, Malabar giant squirrel, and Nilgiri marten are regularly spotted. Elephants, gaur, tigers, and leopards are present but rarely seen in the dense cover. Birding is good at 211 species, with great Indian hornbill, Ceylon frogmouth, Nilgiri wood pigeon, and Malabar parakeet among the highlights.',
+    wildlifeCards: [
+      { name: 'Lion-tailed Macaque', image: '/images/silent-valley-wildlife-lion-tailed-macaque.jpg' },
+      { name: 'Nilgiri Langur', image: '/images/silent-valley-wildlife-nilgiri-langur.jpg' },
+      { name: 'Malabar Giant Squirrel', image: '/images/silent-valley-wildlife-malabar-giant-squirrel.jpg' },
+      { name: 'Great Indian Hornbill', image: '/images/silent-valley-wildlife-great-indian-hornbill.jpg' },
+      { name: 'Nilgiri Marten', image: '/images/silent-valley-wildlife-nilgiri-marten.jpg' },
+    ],
+
+    safari: {
+      types: ['jeep', 'walking'],
+      bookingRequirement: 'Yes',
+      coreZoneAccess: 'Yes',
+      density: 'Low',
+      prose:
+        'Jeep safari from Mukkali gate to Sairandhri visitor centre, 22 km inside the park. A 1 km guided nature trail from Sairandhri to the Kunthipuzha river. Entry 8 AM to 1 PM, exit by 5 PM. Forest guard accompanies every group. Permission from the Mukkali or Mannarkkad wildlife office.',
+      gates: [
+        { name: 'Mukkali', qualifier: 'sole entry point' },
+      ],
+    },
+
+    networkQuality: 'None',
+    stayQuality: 'Budget',
+    entryFeeINR: 50,
+    entryFeeForeigner: 50,
+    practicalProse:
+      'Carry rain gear year-round. Leeches are common in and after monsoon. No food inside the park. Cash only at Mukkali. Sturdy shoes for the nature trail. Photography in dense canopy demands fast glass.',
+
+    connectivityProse:
+      '40 km from Mannarkkad, 55 km from Palakkad. Sole entry at Mukkali gate.',
+    transport: [
+      { icon: 'plane', desc: 'Coimbatore Airport (CJB), 120 km. Taxi via Anakkatty to Mukkali, 3 hours.' },
+      { icon: 'train', desc: 'Palakkad Junction, 55 km. Well-connected to Chennai, Kochi, Delhi. Taxi to Mukkali.' },
+      { icon: 'bus', desc: 'KSRTC buses from Palakkad to Mannarkkad (1 hour). Local bus to Mukkali.' },
+      { icon: 'car', desc: 'From Coimbatore via Anakkatty (90 km, 2.5 hours). From Palakkad via Mannarkkad (55 km).' },
+    ],
+
+    photoProse:
+      'Dense canopy means low light. Fast lenses (f/2.8) and high ISO are essential. Lion-tailed macaques in the mid-canopy need a 300-400mm lens aimed upward. The Kunthipuzha river is the best landscape subject.',
   },
   {
     status: 'draft',

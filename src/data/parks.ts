@@ -597,7 +597,7 @@ export const parks: Park[] = [
 
     safari: {
       types: ['jeep'],
-      bookingRequirement: 'Weeks in advance',
+      bookingRequirement: 'Yes',
       coreZoneAccess: 'Yes',
       density: 'Moderate',
       prose:

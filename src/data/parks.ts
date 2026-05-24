@@ -404,12 +404,110 @@ export const parks: Park[] = [
     coordinates: { lat: 26.67, lng: 89.35 },
   },
   {
-    status: 'draft',
-    id: "jim-corbett",
-    name: "Jim Corbett National Park",
-    state: "Uttarakhand",
-    region: "North India",
-    coordinates: { lat: 29.53, lng: 78.77 },
+    status: 'live',
+    id: 'jim-corbett',
+    name: 'Jim Corbett National Park',
+    state: 'Uttarakhand',
+    region: 'North India',
+    oneLiner: "India's first national park, with the country's highest tiger count",
+    description:
+      'Established in 1936 as Hailey National Park, this was the first national park in India and the first to come under Project Tiger in 1973. Spread across the sub-Himalayan foothills where the Ramganga river cuts through sal forests, Corbett holds around 260 to 290 tigers. Dhikala, the overnight zone deep inside the park, remains one of the most coveted wildlife experiences in the country.',
+    tags: ['wildlife', 'heritage', 'families'],
+    heroImage: '/images/jim-corbett.jpg',
+    unescoStatus: false,
+    permitRequired: false,
+
+    established: 1936,
+    areaKm2: 521,
+    openMonths: [10, 6] as [number, number],
+    elevationRange: [385, 1220] as [number, number],
+    recommendedDays: 2,
+    nearestCity: 'Ramnagar',
+    nearestCityDistKm: 12,
+    coordinates: { lat: 29.549, lng: 78.935 },
+
+    scores: {
+      wildlife: { score: 8, desc: 'High tiger density, elephants common, excellent birding' },
+      scenic: { score: 7, desc: 'Ramganga valley, sal forests, and Himalayan foothills' },
+      accessibility: { score: 8, desc: '5-6 hours by road from Delhi, direct trains to Ramnagar' },
+      crowdLevel: { score: 3, desc: 'Very high demand, Dhikala books out 45 days ahead' },
+      remoteness: { score: 4, desc: 'Ramnagar is a small town but well-connected' },
+      infrastructure: { score: 8, desc: 'Online booking, multiple zones, forest rest houses, luxury resorts' },
+    },
+
+    bestMonths: [11, 3] as [number, number],
+    speciality: 'tiger safari',
+    specialityMonths: [3, 6] as [number, number],
+    seasonProse:
+      'November to March is the most comfortable season, with clear skies and cool mornings. Tiger sighting probability climbs steeply from March to June as undergrowth thins and animals move towards water. Most zones close during monsoon (July to mid-October), though Jhirna and Dhela stay open year-round.',
+
+    trivia: [
+      'Named after Jim Corbett, the hunter-turned-conservationist who tracked and shot man-eating tigers and leopards in these very forests.',
+      "India's first national park (1936) and first Project Tiger reserve (1973).",
+      "Dhikala forest rest house, built in 1936, sits on a bluff overlooking the Patlidun valley and offers what many consider India's best overnight wildlife experience.",
+    ],
+
+    climate: ['subtropical'],
+    terrain: ['hilly', 'river-heavy'],
+    landscapeProse:
+      "Sal forest dominates, making up about 73% of the park's cover. The Ramganga river runs through the centre, feeding marshes and a large reservoir. Grasslands and chaurs (open meadows) break up the canopy, especially around Dhikala and Bijrani. The terrain rises from flat riverine belts at 385 metres to forested ridges at 1,220 metres along the Himalayan foothills. Winter mornings bring dense fog that lifts dramatically around 9 AM.",
+    landscapeImages: [
+      '/images/jim-corbett-landscape-1.jpg',
+      '/images/jim-corbett-landscape-2.jpg',
+      '/images/jim-corbett-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Bengal Tiger',
+    sightingProb: 'likely',
+    birdingQuality: 'Exceptional',
+    animalSpecies: 50,
+    birdingSpecies: 580,
+    wildlifeProse:
+      'Around 260 to 290 tigers roam the reserve, the highest count of any tiger reserve in India. Sightings are not guaranteed on a single safari but likely across a 2-day visit, especially in summer when vegetation thins. Asian elephants move in large herds through the sal corridors. Leopards, sloth bears, gharial, and mugger crocodile are present. Birding is outstanding: 580 recorded species including crested serpent eagle, great hornbill, wallcreeper, brown dipper, and winter migrants at the Ramganga reservoir.',
+    wildlifeCards: [
+      { name: 'Bengal Tiger', image: '/images/jim-corbett-wildlife-bengal-tiger.jpg' },
+      { name: 'Asian Elephant', image: '/images/jim-corbett-wildlife-asian-elephant.jpg' },
+      { name: 'Leopard', image: '/images/jim-corbett-wildlife-leopard.jpg' },
+      { name: 'Sloth Bear', image: '/images/jim-corbett-wildlife-sloth-bear.jpg' },
+      { name: 'Gharial', image: '/images/jim-corbett-wildlife-gharial.jpg' },
+      { name: 'Great Hornbill', image: '/images/jim-corbett-wildlife-great-hornbill.jpg' },
+    ],
+
+    safari: {
+      types: ['jeep', 'canter'],
+      bookingRequirement: 'Yes',
+      coreZoneAccess: 'Yes',
+      density: 'High',
+      prose:
+        'Seven tourism zones, each with a separate gate and permit. Bijrani and Jhirna are the easiest to access from Ramnagar. Dhikala requires an overnight stay at forest rest houses and books out 45 days ahead. Safaris run in morning and afternoon shifts of about 3 hours. Canter safaris (20-seat vehicles) operate in Dhikala only. Private vehicles are not allowed.',
+      gates: [
+        { name: 'Amdanda Gate', qualifier: 'Bijrani zone' },
+        { name: 'Dhela Gate', qualifier: 'Jhirna zone' },
+        { name: 'Dhangadi Gate', qualifier: 'Dhikala zone' },
+        { name: 'Durga Devi Gate' },
+        { name: 'Phato Gate' },
+        { name: 'Vatanbasa Gate', qualifier: 'Sonanadi, via Kotdwar' },
+      ],
+    },
+
+    networkQuality: 'Decent',
+    stayQuality: 'Luxury',
+    entryFeeINR: 500,
+    entryFeeForeigner: 1500,
+    practicalProse:
+      'Winter mornings can dip to 5°C inside the open jeep, so layer up. Carry binoculars and a long lens. Cash is useful for tips and smaller establishments in Ramnagar. If you book Dhikala, meals at the forest rest house canteen are basic but adequate.',
+
+    connectivityProse:
+      '12 km from Ramnagar, which sits on NH309. Delhi is 260 km (5-6 hours by road or overnight train).',
+    transport: [
+      { icon: 'plane', desc: 'Pantnagar Airport (PGH), 82 km. Limited domestic flights. Taxi to Ramnagar takes 2 hours.' },
+      { icon: 'train', desc: 'Ramnagar Railway Station (RMR), 12 km. Direct trains from Delhi (Ranikhet Express, overnight).' },
+      { icon: 'bus', desc: 'UTC and private buses from Delhi ISBT Anand Vihar to Ramnagar (6-7 hours).' },
+      { icon: 'car', desc: 'NH309 from Delhi via Moradabad and Kashipur (5-6 hours). Well-maintained highway.' },
+    ],
+
+    photoProse:
+      "Dhikala's Patlidun grasslands are the signature landscape. Early morning light on the Ramganga riverbed, with mist lifting off the water, makes for dramatic wide shots. A 200-500mm lens is ideal for tiger and elephant portraits. Bijrani's dense sal forest demands faster glass for low-light shooting.",
   },
   {
     status: 'draft',
@@ -428,12 +526,106 @@ export const parks: Park[] = [
     coordinates: { lat: 18.85, lng: 81.96 },
   },
   {
-    status: 'draft',
-    id: "kanha",
-    name: "Kanha National Park",
-    state: "Madhya Pradesh",
-    region: "Central India",
-    coordinates: { lat: 22.33, lng: 80.62 },
+    status: 'live',
+    id: 'kanha',
+    name: 'Kanha National Park',
+    state: 'Madhya Pradesh',
+    region: 'Central India',
+    oneLiner: "Rudyard Kipling's jungle, and the last refuge of the hardground barasingha",
+    description:
+      "Sal forests, bamboo thickets, and sweeping grass meadows in the Maikal hills of the Satpura range. India's most well-managed tiger reserve, and the park that saved the hardground barasingha from extinction. Kipling based The Jungle Book on these forests. Four safari zones, each with a distinct character, spread across 940 km² of core area.",
+    tags: ['wildlife', 'families', 'photography'],
+    heroImage: '/images/kanha.jpg',
+    unescoStatus: false,
+    permitRequired: false,
+
+    established: 1955,
+    areaKm2: 940,
+    openMonths: [10, 6] as [number, number],
+    elevationRange: [600, 900] as [number, number],
+    recommendedDays: 3,
+    nearestCity: 'Mandla',
+    nearestCityDistKm: 64,
+    coordinates: { lat: 22.228, lng: 80.645 },
+
+    scores: {
+      wildlife: { score: 9, desc: 'High tiger density, barasingha herds, strong overall mammal diversity' },
+      scenic: { score: 8, desc: 'Open meadows ringed by sal forest, Bamni Dadar sunset point' },
+      accessibility: { score: 5, desc: 'Jabalpur airport 170 km, then 4 hours by road' },
+      crowdLevel: { score: 4, desc: 'Peak season weekends are busy, weekdays are manageable' },
+      remoteness: { score: 6, desc: 'Deep in rural MP, limited facilities beyond resort clusters' },
+      infrastructure: { score: 8, desc: 'Online booking, excellent guides, luxury resorts near both gates' },
+    },
+
+    bestMonths: [2, 5] as [number, number],
+    speciality: 'barasingha',
+    specialityMonths: [11, 2] as [number, number],
+    seasonProse:
+      'February to May offers the best tiger sighting odds as deciduous trees shed leaves, water sources shrink, and animals concentrate around meadows. October and November are lush and cool but visibility through dense foliage is lower. The park closes July to September for monsoon. Wednesday is the weekly off day across all zones.',
+
+    trivia: [
+      "Rudyard Kipling's The Jungle Book draws directly from the Kanha landscape. Mowgli, Baloo, and Shere Khan roamed these sal forests.",
+      "The hardground barasingha (Cervus duvauceli branderi) was down to 66 individuals in 1970. Kanha's breeding programme brought the count past 500.",
+      "Bamni Dadar, a flat-topped plateau inside the park, is called 'Sunset Point' and offers one of the finest views in any Indian national park.",
+    ],
+
+    climate: ['subtropical'],
+    terrain: ['hilly', 'dense-forest'],
+    landscapeProse:
+      'Wide, open meadows (maidans) form the heart of the park, where barasingha and chital herds graze under the watch of predators. Surrounding these clearings is dense sal forest with bamboo understorey that gives way to mixed deciduous woodland at higher elevations. Flat-topped plateaux (dadars) rise above the canopy, offering long views across the forest. The Banjar and Halon rivers run through the reserve, feeding seasonal nalas that dry up by March.',
+    landscapeImages: [
+      '/images/kanha-landscape-1.jpg',
+      '/images/kanha-landscape-2.jpg',
+      '/images/kanha-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Bengal Tiger',
+    sightingProb: 'likely',
+    birdingQuality: 'Rich',
+    animalSpecies: 43,
+    birdingSpecies: 325,
+    wildlifeProse:
+      'Around 115 adult tigers across the reserve, with good sighting frequency in the Kanha and Mukki zones. Barasingha herds gather on the central meadows, especially in winter, making them easy to observe. Gaur (Indian bison) appear frequently in the sal forests. Dhole packs hunt cooperatively and are seen often enough to be a highlight. Sloth bears, leopards, four-horned antelope, and blackbuck round out a strong mammal list. Birding is rich at 325 species, with crested serpent eagle, Indian pitta, Malabar pied hornbill, paradise flycatcher, and lesser adjutant stork among the regulars.',
+    wildlifeCards: [
+      { name: 'Bengal Tiger', image: '/images/kanha-wildlife-bengal-tiger.jpg' },
+      { name: 'Barasingha', image: '/images/kanha-wildlife-barasingha.jpg' },
+      { name: 'Gaur', image: '/images/kanha-wildlife-gaur.jpg' },
+      { name: 'Dhole', image: '/images/kanha-wildlife-dhole.jpg' },
+      { name: 'Sloth Bear', image: '/images/kanha-wildlife-sloth-bear.jpg' },
+      { name: 'Indian Pitta', image: '/images/kanha-wildlife-indian-pitta.jpg' },
+    ],
+
+    safari: {
+      types: ['jeep'],
+      bookingRequirement: 'Weeks in advance',
+      coreZoneAccess: 'Yes',
+      density: 'Moderate',
+      prose:
+        'Four core zones (Kanha, Kisli, Mukki, Sarhi) and four buffer zones. Two main entry gates: Khatia (for Kanha, Kisli, and Sarhi zones) and Mukki. Safaris run in morning and afternoon shifts of 4 to 5 hours. Vehicle limits per zone are strict. Book through the MP Forest Department portal (mponline.gov.in). Wednesday is a park-wide closure day.',
+      gates: [
+        { name: 'Khatia Gate', qualifier: 'Kanha, Kisli, and Sarhi zones' },
+        { name: 'Mukki Gate', qualifier: 'Mukki zone' },
+      ],
+    },
+
+    networkQuality: 'Poor',
+    stayQuality: 'Luxury',
+    entryFeeINR: 1370,
+    entryFeeForeigner: 2690,
+    practicalProse:
+      'Carry warm layers for winter morning safaris when open-jeep temperatures can drop to 5°C. Afternoons in March to May cross 40°C. Cash is essential as ATMs near the park are unreliable. Both gates have resort clusters ranging from budget to high-end lodges.',
+
+    connectivityProse:
+      'Deep in central MP. Khatia gate is 170 km from Jabalpur, Mukki gate is 145 km from Gondia. No nearby town of significant size.',
+    transport: [
+      { icon: 'plane', desc: 'Jabalpur Airport (JLR), 170 km from Khatia gate. Flights from Delhi, Mumbai, Bhopal. Taxi 4 hours.' },
+      { icon: 'train', desc: 'Jabalpur Junction (JBP), 165 km. Well-connected to Delhi, Mumbai, Kolkata, Varanasi. Taxi to park.' },
+      { icon: 'bus', desc: 'State buses from Jabalpur and Mandla to Khatia. Infrequent, not recommended for tight schedules.' },
+      { icon: 'car', desc: 'NH44 to Jabalpur, then state highways to Khatia (4 hours) or via Gondia to Mukki (3.5 hours).' },
+    ],
+
+    photoProse:
+      'Morning light on the Kanha meadows with barasingha herds is the iconic shot. Tigers often emerge from sal forest into open grassland, giving clean backgrounds rare in Indian parks. A 200-500mm lens is ideal. Bamni Dadar at sunset provides dramatic wide-angle landscape opportunities. Dhole hunts, when witnessed, offer some of the most dynamic wildlife action photography in the country.',
   },
   {
     status: 'draft',
@@ -1114,12 +1306,109 @@ export const parks: Park[] = [
     coordinates: { lat: 28.47, lng: 76.89 },
   },
   {
-    status: 'draft',
-    id: "sundarbans",
-    name: "Sundarbans National Park",
-    state: "West Bengal",
-    region: "East India",
-    coordinates: { lat: 21.95, lng: 88.9 },
+    status: 'live',
+    id: 'sundarbans',
+    name: 'Sundarbans National Park',
+    state: 'West Bengal',
+    region: 'East India',
+    oneLiner: 'Tidal mangrove delta where tigers swim between islands',
+    description:
+      "The world's largest mangrove forest, spread across 54 islands in the Ganges-Brahmaputra-Meghna delta. About 100 Royal Bengal tigers have adapted to this amphibious landscape, swimming between islands and hunting fish, crabs, and deer. No jeeps here. Everything happens by boat, through a maze of tidal creeks and mudflats that reshape with every tide cycle.",
+    tags: ['wildlife', 'birding', 'marine'],
+    heroImage: '/images/sundarbans.jpg',
+    unescoStatus: true,
+    permitRequired: true,
+    permitDescription:
+      'Permits are arranged through tour operators or the Sundarban Tiger Reserve office at Canning. Most visitors get them bundled with their boat booking.',
+
+    established: 1984,
+    areaKm2: 1330,
+    openMonths: [9, 3] as [number, number],
+    elevationRange: [0, 8] as [number, number],
+    recommendedDays: 3,
+    nearestCity: 'Kolkata',
+    nearestCityDistKm: 100,
+    coordinates: { lat: 21.838, lng: 88.885 },
+
+    scores: {
+      wildlife: { score: 7, desc: 'Tigers present but rarely seen; crocodiles and birds are reliable' },
+      scenic: { score: 7, desc: 'Eerie, beautiful mangrove waterways unlike any other Indian park' },
+      accessibility: { score: 4, desc: '3 hours by road from Kolkata, then boat-only access' },
+      crowdLevel: { score: 6, desc: 'Moderate visitor numbers, spread across vast waterways' },
+      remoteness: { score: 7, desc: 'Deep delta, no roads inside, limited connectivity' },
+      infrastructure: { score: 5, desc: 'Basic lodges, watchtower network, limited English-speaking guides' },
+    },
+
+    bestMonths: [11, 2] as [number, number],
+    speciality: 'mangrove tigers',
+    specialityMonths: [12, 2] as [number, number],
+    seasonProse:
+      'November to February is ideal. Cool, dry weather, migratory birds arrive in huge numbers, and receding water levels push wildlife to visible banks and mudflats. March to May is hot and humid. The park closes informally during peak monsoon (June to August) when cyclone risk is high and waterways become dangerous.',
+
+    trivia: [
+      "Sundarbans tigers are the world's only mangrove-adapted tiger population. They swim between islands, drink saline water, and eat fish and crabs alongside their usual prey.",
+      'Human-tiger conflict here is among the worst anywhere. Honey collectors and fishermen entering the forest historically lost 40 to 50 people per year to tiger attacks.',
+      "The name comes from Sundari (Heritiera littoralis), the dominant mangrove species, not from the Bengali word for 'beautiful'.",
+    ],
+
+    climate: ['mangrove', 'tropical-wet'],
+    terrain: ['flat', 'wetland'],
+    landscapeProse:
+      'Sea-level delta land. No hills, no dry ground. Dense mangrove canopy lines every creek and channel, roots arching into brackish water. Mudflats exposed at low tide stretch for hundreds of metres, covered with crab burrows and tracked by wading birds. At high tide the same flats disappear entirely, and the forest appears to float on the water. The landscape changes every six hours with the tides.',
+    landscapeImages: [
+      '/images/sundarbans-landscape-1.jpg',
+      '/images/sundarbans-landscape-2.jpg',
+      '/images/sundarbans-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Royal Bengal Tiger',
+    sightingProb: 'rare',
+    birdingQuality: 'Rich',
+    animalSpecies: 42,
+    birdingSpecies: 300,
+    wildlifeProse:
+      "About 100 tigers on the Indian side, but spotting one from a boat is genuinely rare. Dense mangrove cover and the animals' semi-aquatic habits make sightings a matter of luck, not skill. What you will see: saltwater crocodiles basking on mudbanks, spotted deer herds on every island edge, water monitors, Gangetic and Irrawaddy dolphins in the channels, and fishing cats at dusk. Birding is strong, especially for raptors (white-bellied sea eagle, osprey, Brahminy kite) and waders (whimbrel, curlew, sandpipers). Winter brings large migratory flocks.",
+    wildlifeCards: [
+      { name: 'Royal Bengal Tiger', image: '/images/sundarbans-wildlife-royal-bengal-tiger.jpg' },
+      { name: 'Saltwater Crocodile', image: '/images/sundarbans-wildlife-saltwater-crocodile.jpg' },
+      { name: 'Fishing Cat', image: '/images/sundarbans-wildlife-fishing-cat.jpg' },
+      { name: 'Gangetic Dolphin', image: '/images/sundarbans-wildlife-gangetic-dolphin.jpg' },
+      { name: 'Spotted Deer', image: '/images/sundarbans-wildlife-spotted-deer.jpg' },
+      { name: 'White-bellied Sea Eagle', image: '/images/sundarbans-wildlife-white-bellied-sea-eagle.jpg' },
+    ],
+
+    safari: {
+      types: ['boat'],
+      bookingRequirement: 'Yes',
+      coreZoneAccess: 'Buffer zone only',
+      density: 'Low',
+      prose:
+        'All exploration is by motorized boat through tidal creeks. You cannot step off the boat into the forest except at designated watchtower platforms. Day trips from Sajnekhali cover 2 to 3 watchtowers. Multi-day trips on houseboats or with lodge stays go deeper, reaching Sudhanyakhali, Dobanki, and Netidhopani. Permits are arranged through tour operators or the Sundarban Tiger Reserve office at Canning.',
+      gates: [
+        { name: 'Godkhali', qualifier: 'main jetty, road access from Kolkata' },
+        { name: 'Sonakhali' },
+        { name: 'Sajnekhali', qualifier: 'main watchtower and permit checkpoint' },
+      ],
+    },
+
+    networkQuality: 'Poor',
+    stayQuality: 'Budget',
+    entryFeeINR: 100,
+    entryFeeForeigner: 200,
+    practicalProse:
+      'Mosquito repellent is essential. Carry sunscreen and a hat for open-deck boat rides. Cash only inside the delta. Most guides speak Bengali with limited Hindi or English, so book through a Kolkata-based operator if language is a concern. Overnight houseboat stays are atmospheric but basic.',
+
+    connectivityProse:
+      '100 km from Kolkata by road to Godkhali jetty, then boat into the delta. No roads inside the park.',
+    transport: [
+      { icon: 'plane', desc: 'Netaji Subhas Chandra Bose International Airport (CCU), Kolkata. 100 km to Godkhali by road, 3 hours.' },
+      { icon: 'train', desc: 'Canning station via Sealdah (Kolkata), 1.5 hours by local train. Then shared transport to Godkhali, 1 hour.' },
+      { icon: 'bus', desc: 'Buses from Kolkata Esplanade to Sonakhali or Godkhali, 3-4 hours.' },
+      { icon: 'car', desc: 'Drive from Kolkata to Godkhali via Baruipur-Canning road (3 hours). Parking available at the jetty.' },
+    ],
+
+    photoProse:
+      'Dawn on the creeks, with mist hanging over still water and mangrove reflections, is the signature image. A 100-400mm lens covers most situations. Crocodiles and sea eagles are the most photogenic reliable subjects. If a tiger does appear on a creek bank, it will be at distance through dense foliage, so reach matters.',
   },
   {
     status: 'draft',
@@ -1130,12 +1419,104 @@ export const parks: Park[] = [
     coordinates: { lat: 20.25, lng: 79.35 },
   },
   {
-    status: 'draft',
-    id: "valley-of-flowers",
-    name: "Valley of Flowers National Park",
-    state: "Uttarakhand",
-    region: "North India",
-    coordinates: { lat: 30.73, lng: 79.61 },
+    status: 'live',
+    id: 'valley-of-flowers',
+    name: 'Valley of Flowers National Park',
+    state: 'Uttarakhand',
+    region: 'North India',
+    oneLiner: 'A Himalayan alpine meadow carpeted with 600+ wildflower species every monsoon',
+    description:
+      'A glacial valley at 3,350 to 3,658 metres in the Garhwal Himalayas, discovered by British mountaineer Frank Smythe in 1931 when he lost his way returning from Mt. Kamet. For about four months each year, the valley floor erupts into a dense carpet of alpine flowers, from blue poppies and cobra lilies to Brahma Kamal and primulas. Part of the Nanda Devi Biosphere Reserve and a UNESCO World Heritage Site alongside Nanda Devi National Park.',
+    tags: ['trekking', 'photography'],
+    heroImage: '/images/valley-of-flowers.jpg',
+    unescoStatus: true,
+    permitRequired: true,
+
+    established: 1982,
+    areaKm2: 88,
+    openMonths: [6, 10] as [number, number],
+    elevationRange: [3200, 6675] as [number, number],
+    recommendedDays: 4,
+    nearestCity: 'Joshimath',
+    nearestCityDistKm: 25,
+    coordinates: { lat: 30.73, lng: 79.618 },
+
+    scores: {
+      wildlife: { score: 3, desc: 'Mammals exist but are rarely seen; this is a flora park' },
+      scenic: { score: 10, desc: 'Arguably the most visually stunning national park in India' },
+      accessibility: { score: 2, desc: '17 km trek from Govindghat, no road access to the valley' },
+      crowdLevel: { score: 5, desc: 'Busy in July-August peak bloom, quiet in June and October' },
+      remoteness: { score: 8, desc: 'High Himalaya, trek-only access, basic facilities at Ghangaria' },
+      infrastructure: { score: 4, desc: 'Guesthouses and dhabas at Ghangaria, nothing inside the valley' },
+    },
+
+    bestMonths: [7, 8] as [number, number],
+    speciality: 'alpine wildflowers',
+    specialityMonths: [7, 9] as [number, number],
+    seasonProse:
+      'July and August are peak bloom. The entire valley floor turns into a mosaic of colour, with hundreds of species flowering simultaneously. June is early season with patchy snow and fewer flowers. September brings late bloomers like Brahma Kamal and autumn composites. By late October, snowfall shuts the valley until the following June.',
+
+    trivia: [
+      "Frank Smythe stumbled upon the valley in 1931 and titled his book about it 'The Valley of Flowers'. The name stuck.",
+      'Over 600 flowering plant species are recorded in just 88 km², one of the highest alpine flora densities anywhere in the Himalayas.',
+      'Camping and overnight stays inside the valley are strictly prohibited. All visitors must return to Ghangaria by 5 PM.',
+    ],
+
+    climate: ['alpine'],
+    terrain: ['mountainous', 'plateau'],
+    landscapeProse:
+      'A hanging glacial valley, 5 km long and 2 km wide, cradled between snow-covered ridges. The Pushpavati river runs through the centre, fed by seasonal waterfalls that cascade off the surrounding cliffs. Above the flower meadows, the terrain rises steeply through moraine and scree to peaks like Gauri Parbat (6,708 m) and Rataban (6,126 m). On clear mornings, the entire valley is framed by snow and rock with not a single man-made structure in sight.',
+    landscapeImages: [
+      '/images/valley-of-flowers-landscape-1.jpg',
+      '/images/valley-of-flowers-landscape-2.jpg',
+      '/images/valley-of-flowers-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Himalayan Blue Poppy',
+    sightingProb: 'near-guaranteed',
+    birdingQuality: 'Good',
+    animalSpecies: 13,
+    birdingSpecies: 114,
+    wildlifeProse:
+      'This is a flora park. Wildlife exists but the dense flower meadows and high altitude mean sightings are uncommon. Himalayan tahr are the most frequently seen mammals. Musk deer, serow, bharal (blue sheep), and Asiatic black bear are present but elusive. Snow leopard territory extends into the higher reaches but sightings are essentially zero for trekkers. Birding is moderate for a Himalayan park: lammergeier, Himalayan vulture, Himalayan monal, koklass pheasant, yellow-billed and red-billed chough, and snow pigeon are regularly spotted along the trek route.',
+    wildlifeCards: [
+      { name: 'Himalayan Blue Poppy', image: '/images/valley-of-flowers-wildlife-blue-poppy.jpg' },
+      { name: 'Brahma Kamal', image: '/images/valley-of-flowers-wildlife-brahma-kamal.jpg' },
+      { name: 'Himalayan Monal', image: '/images/valley-of-flowers-wildlife-himalayan-monal.jpg' },
+      { name: 'Himalayan Tahr', image: '/images/valley-of-flowers-wildlife-himalayan-tahr.jpg' },
+      { name: 'Lammergeier', image: '/images/valley-of-flowers-wildlife-lammergeier.jpg' },
+    ],
+
+    safari: {
+      types: ['walking'],
+      bookingRequirement: 'Yes',
+      coreZoneAccess: 'Yes',
+      density: 'Moderate',
+      prose:
+        'No vehicles of any kind. You trek 17 km from Govindghat (via Pulna) to Ghangaria over one day, then 5 km from Ghangaria to the valley entrance the next morning. Inside the valley, a marked trail loops through the meadows. Entry permit checked at a forest checkpoint 1.5 km from Ghangaria. Must exit by 5 PM. No camping, no fires, no picking flowers.',
+      gates: [
+        { name: 'Ghangaria Checkpoint', qualifier: 'sole entry, 5 km from valley' },
+      ],
+    },
+
+    networkQuality: 'None',
+    stayQuality: 'Budget',
+    entryFeeINR: 150,
+    entryFeeForeigner: 600,
+    practicalProse:
+      'Carry rain gear. The valley is open only during monsoon, so rain is a certainty. Good trekking shoes with grip are essential as the trail gets muddy and slippery. No ATMs or reliable shops at Ghangaria. Carry enough cash from Joshimath. Ponies and porters are available from Govindghat for those who cannot trek the full distance.',
+
+    connectivityProse:
+      '25 km by road from Joshimath to Govindghat, then a 17 km trek to Ghangaria base camp. No road access to the valley.',
+    transport: [
+      { icon: 'plane', desc: 'Jolly Grant Airport (DED), Dehradun, 280 km from Govindghat. Taxi via Rishikesh and Joshimath, 10-12 hours.' },
+      { icon: 'train', desc: 'Rishikesh or Haridwar, 273 km from Govindghat. Then shared taxi or bus to Joshimath, 8-9 hours.' },
+      { icon: 'bus', desc: 'GMOU buses from Rishikesh and Haridwar to Joshimath. Local transport from Joshimath to Govindghat.' },
+      { icon: 'car', desc: 'NH58 from Delhi to Joshimath via Rishikesh, Devprayag, Chamoli (12-14 hours). Road condition variable post-Chamoli.' },
+    ],
+
+    photoProse:
+      'Wide-angle lenses (16-35mm) work best for the carpet-of-flowers landscape. A macro lens is worth the weight for individual flower portraits. Morning light between 8 and 10 AM is ideal before clouds build. The Pushpavati river with flowers in foreground and snow peaks behind is the classic composition. Rain can arrive by noon, so start early.',
   },
   {
     status: 'draft',

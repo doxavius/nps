@@ -1,27 +1,66 @@
+@import 'mapbox-gl/dist/mapbox-gl.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FAF7F2;
+  color: #1A1A17;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+html,
+body,
+#__next {
+  height: 100%;
+  margin: 0;
+}
+
+.font-spectral {
+  font-family: var(--font-spectral), serif;
+}
+
+/* Subtle Mapbox controls — bone background, ink icons */
+.mapboxgl-ctrl-group {
+  background-color: #FAF7F2 !important;
+  border: 1px solid rgba(107, 123, 141, 0.25) !important;
+  box-shadow: 0 1px 2px rgba(26, 26, 23, 0.06) !important;
+}
+
+.mapboxgl-ctrl-group button {
+  background-color: #FAF7F2 !important;
+  width: 32px;
+  height: 32px;
+}
+
+.mapboxgl-ctrl-group button + button {
+  border-top: 1px solid rgba(107, 123, 141, 0.2) !important;
+}
+
+.mapboxgl-ctrl-group button:hover {
+  background-color: #F0EBE0 !important;
+}
+
+.mapboxgl-ctrl-group button .mapboxgl-ctrl-icon {
+  filter: brightness(0) saturate(100%);
+  opacity: 0.85;
+}
+
+/* Subtle attribution */
+.mapboxgl-ctrl-attrib {
+  background-color: rgba(250, 247, 242, 0.7) !important;
+  font-family: var(--font-inter), system-ui, sans-serif !important;
+  font-size: 10px !important;
+}
+
+.mapboxgl-ctrl-attrib a {
+  color: #6B7B8D !important;
+}
+
+.mapboxgl-ctrl-logo {
+  opacity: 0.7;
 }

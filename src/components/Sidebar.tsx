@@ -445,7 +445,6 @@ function LandscapeSection({ park }: { park: LivePark }) {
 // ── Section: Wildlife ──────────────────────────────────
 
 function WildlifeSection({ park }: { park: LivePark }) {
-  const showSightingRow = park.sightingProb || park.animalSpecies != null;
   return (
     <Section>
       <SectionHeader>WILDLIFE</SectionHeader>
@@ -453,23 +452,20 @@ function WildlifeSection({ park }: { park: LivePark }) {
         {park.flagshipFauna && (
           <FullWidthStatCard label="Flagship fauna" value={park.flagshipFauna} />
         )}
-        {showSightingRow && (
-          <StatRow>
-            {park.sightingProb ? (
-              <StatCard
-                label="Sighting probability"
-                value={DISPLAY.sightingProb[park.sightingProb]}
-              />
-            ) : (
-              <div className="flex-[1_0_0]" />
-            )}
-            {park.animalSpecies != null ? (
-              <StatCard label="Animal species" value={`${park.animalSpecies}+`} />
-            ) : (
-              <div className="flex-[1_0_0]" />
-            )}
-          </StatRow>
-        )}
+        <StatRow>
+          {park.sightingProb ? (
+            <StatCard
+              label="Sighting probability"
+              value={DISPLAY.sightingProb[park.sightingProb]}
+            />
+          ) : (
+            <div className="flex-[1_0_0]" />
+          )}
+          <StatCard
+            label="Animal species"
+            value={park.animalSpecies != null ? `${park.animalSpecies}+` : 'DNA'}
+          />
+        </StatRow>
         <StatRow>
           <StatCard
             label="Birding quality"

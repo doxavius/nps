@@ -1,0 +1,117 @@
+{
+  "id": "great-himalayan",
+  "name": "Great Himalayan National Park",
+  "state": "Himachal Pradesh",
+  "region": "North India",
+  "oneLiner": "A UNESCO-listed western Himalayan wilderness accessible only on foot",
+  "description": "Four pristine river valleys (Tirthan, Sainj, Jiwa Nal, Parvati) rising from temperate forest to alpine meadows and glaciers across a 4,100 m elevation range. No roads enter the park. All exploration is by multi-day trek through dense deodar, blue pine, and birch forests into high pastures where western tragopan and snow leopard roam. UNESCO World Heritage Site since 2014, recognised for outstanding biodiversity at the junction of the Indomalayan and Palearctic biogeographic realms.",
+  "tags": ["trekking", "offbeat", "birding"],
+  "heroImage": "/images/gh.jpg",
+  "unescoStatus": true,
+  "permitRequired": true,
+
+  "established": 1984,
+  "areaKm2": 1171,
+  "openMonths": [4, 11],
+  "elevationRange": [1500, 6000],
+  "recommendedDays": 5,
+  "nearestCity": "Kullu",
+  "nearestCityDistKm": 60,
+  "coordinates": { "lat": 31.733, "lng": 77.550 },
+
+  "scores": [
+    {
+      "category": "wildlife",
+      "value": 5,
+      "desc": "Rich mammal list but dense forest and high altitude make sightings uncommon"
+    },
+    {
+      "category": "scenic",
+      "value": 10,
+      "desc": "Glacial valleys, alpine meadows, deodar forests, 6,000 m peaks"
+    },
+    {
+      "category": "accessibility",
+      "value": 3,
+      "desc": "No roads inside the park, multi-day treks from the boundary"
+    },
+    {
+      "category": "crowdLevel",
+      "value": 8,
+      "desc": "Very few trekkers compared to mainstream Himalayan treks"
+    },
+    {
+      "category": "remoteness",
+      "value": 8,
+      "desc": "No habitation inside the park, no phone signal beyond the gate"
+    },
+    {
+      "category": "infrastructure",
+      "value": 4,
+      "desc": "Basic camping, local guides, eco-tourism homestays in buffer villages"
+    }
+  ],
+
+  "bestMonths": [5, 6],
+  "speciality": "western tragopan",
+  "specialityMonths": [4, 6],
+  "seasonProse": "April to June is the primary trekking window. Snow melts at lower elevations, wildflowers bloom, and western tragopan breeding calls are heard in the forests. September to November is the second window, with clear post-monsoon skies and animals descending to lower altitudes. July and August bring heavy monsoon rain, landslides, and leech-infested trails. December to March sees heavy snowfall above 2,500 m, restricting access to lower valley walks only.",
+
+  "trivia": [
+    "GHNP sits at the junction of the Indomalayan and Palearctic biogeographic realms, hosting species from both. It shelters 26 Himalayan species and 42 species typical of the Western Ghats and Nilgiris.",
+    "The western tragopan, the rarest of the five tragopan pheasants and among the most endangered birds globally, has one of its last strongholds in this park.",
+    "It took 20 years from the first survey (1980) to formal national park status (1999 notification). UNESCO listing came in 2014."
+  ],
+
+  "climate": ["temperate"],
+  "terrain": ["mountainous", "dense-forest"],
+  "landscapeProse": "Four parallel river valleys cut deep into the western Himalaya, each rising from temperate broadleaf forest at 1,500 m through dense conifer belts of deodar, blue pine, spruce, and fir, into birch and rhododendron zones, then alpine meadow, and finally rock, ice, and glaciers above 4,500 m. The valleys are steep-sided with narrow gorges at the lower end, opening into wide U-shaped glacial basins higher up. No roads, no power lines, no buildings inside the park. The silence and scale are complete.",
+  "landscapeImages": [
+    "/images/gh-landscape-1.jpg",
+    "/images/gh-landscape-2.jpg",
+    "/images/gh-landscape-3.jpg"
+  ],
+
+  "flagshipFauna": "Western Tragopan",
+  "sightingProb": "rare",
+  "birdingQuality": "Rich",
+  "animalSpecies": 31,
+  "birdingSpecies": 181,
+  "wildlifeProse": "The western tragopan is the park's most important species and one of the world's rarest pheasants. Sightings are uncommon but breeding calls are heard in spring in the upper Tirthan and Sainj valleys. Snow leopard, Himalayan brown bear, Himalayan black bear, musk deer, Himalayan tahr, bharal, serow, and goral make up the mammal list. All are elusive in dense forest. Himalayan monal, koklass pheasant, cheer pheasant, and four other pheasant species are present. Raptors include golden eagle, lammergeier, and Himalayan griffon vulture. The 181 bird species span Himalayan to Palearctic ranges.",
+  "wildlifeCards": [
+    { "name": "Western Tragopan", "image": "/images/gh-wildlife-western-tragopan.jpg" },
+    { "name": "Snow Leopard", "image": "/images/gh-wildlife-snow-leopard.jpg" },
+    { "name": "Himalayan Brown Bear", "image": "/images/gh-wildlife-himalayan-brown-bear.jpg" },
+    { "name": "Himalayan Monal", "image": "/images/gh-wildlife-himalayan-monal.jpg" },
+    { "name": "Himalayan Tahr", "image": "/images/gh-wildlife-himalayan-tahr.jpg" },
+    { "name": "Musk Deer", "image": "/images/gh-wildlife-musk-deer.jpg" }
+  ],
+
+  "safari": {
+    "types": ["walking"],
+    "bookingRequirement": "Yes",
+    "coreZoneAccess": "Yes",
+    "density": "Very low",
+    "prose": "All exploration is on foot. No vehicles allowed inside the park. Treks range from 1-day nature walks in the Tirthan valley to 7-day expeditions crossing the Pin-Parvati Pass (5,319 m). Trekking permits are mandatory and obtained from the GHNP office at Sairopa or Shamshi (Kullu). Certified local guides are required. Popular routes: Tirthan Valley (3 to 5 days), Sainj Valley (4 to 6 days), and the Tirthan to Parvati crossing (6 to 7 days).",
+    "gates": [
+      { "name": "Sairopa", "qualifier": "Tirthan valley, main entry" },
+      { "name": "Ropa", "qualifier": "Sainj valley entry" }
+    ]
+  },
+
+  "networkQuality": "None",
+  "stayQuality": "Homestays",
+  "entryFeeINR": 50,
+  "entryFeeForeigner": 200,
+  "practicalProse": "Carry all gear including tents, sleeping bags, and food for multi-day treks. No shops or facilities inside the park. Hire a local guide through the eco-tourism cooperative at Sairopa. Leeches are a problem in early and late season. Altitude sickness is a risk on high-altitude routes above 4,000 m. Buffer zone villages like Gushaini and Banjar have excellent homestays.",
+
+  "connectivityProse": "60 km from Kullu, 50 km from Bhuntar airport. Park boundary accessed from Tirthan or Sainj valley roads. No motor access inside.",
+  "transport": [
+    { "icon": "plane", "desc": "Bhuntar Airport (KUU), 50 km. Flights from Delhi and Chandigarh. Taxi to Sairopa or Gushaini takes 2 hours." },
+    { "icon": "train", "desc": "Joginder Nagar, 143 km, is the nearest narrow-gauge railhead. Chandigarh (290 km) has better connectivity. Then bus or taxi." },
+    { "icon": "bus", "desc": "HRTC buses from Delhi to Kullu (12 hours) or Chandigarh to Kullu (8 hours). Then local bus to Banjar and Gushaini." },
+    { "icon": "car", "desc": "From Delhi via Chandigarh and Mandi to Aut, then Banjar road to Gushaini (12 to 14 hours). From Kullu via Banjar (2 hours)." }
+  ],
+
+  "photoProse": "Wide-angle lenses dominate here. Alpine meadows with snow peaks behind, deodar forests in morning mist, and glacial streams are the signature compositions. For western tragopan and monal, a 300-500mm lens is needed, but sightings are unpredictable. Spring wildflowers in the upper valleys photograph beautifully at close range. Carry weather protection for gear as conditions change fast at altitude."
+}

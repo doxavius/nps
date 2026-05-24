@@ -32,12 +32,107 @@ export const parks: Park[] = [
     coordinates: { lat: 25.33, lng: 90.75 },
   },
   {
-    status: 'draft',
-    id: "bandhavgarh",
-    name: "Bandhavgarh National Park",
-    state: "Madhya Pradesh",
-    region: "Central India",
-    coordinates: { lat: 23.69, lng: 81.04 },
+    status: 'live',
+    id: 'bandhavgarh',
+    name: 'Bandhavgarh National Park',
+    state: 'Madhya Pradesh',
+    region: 'Central India',
+    oneLiner: 'The highest tiger density in India, packed into a compact core zone',
+    description:
+      'A dense sal forest wrapped around a 2,000-year-old hilltop fort in the Vindhya Hills. Former hunting ground of the Maharaja of Rewa, where the first white tiger was captured in 1951. Bandhavgarh\'s compact 105 km² tourism zone and high tiger density give it arguably the best odds of a tiger sighting on any single safari in India.',
+    tags: ['wildlife', 'heritage', 'photography'],
+    heroImage: '/images/bandhavgarh.jpg',
+    unescoStatus: false,
+    permitRequired: false,
+
+    established: 1968,
+    areaKm2: 716,
+    openMonths: [10, 6] as [number, number],
+    elevationRange: [410, 810] as [number, number],
+    recommendedDays: 2,
+    nearestCity: 'Umaria',
+    nearestCityDistKm: 32,
+    coordinates: { lat: 23.699, lng: 80.962 },
+
+    scores: {
+      wildlife: { score: 9, desc: 'Highest tiger sighting probability per safari in India' },
+      scenic: { score: 7, desc: 'Ancient fort on a hilltop, sal forest, grassy meadows' },
+      accessibility: { score: 4, desc: 'Jabalpur airport 170 km, then 3.5 hours by road' },
+      crowdLevel: { score: 3, desc: 'Very high demand for Tala zone, sells out weeks ahead' },
+      remoteness: { score: 6, desc: 'Tala village has resort clusters, otherwise rural MP' },
+      infrastructure: { score: 7, desc: 'Online booking via MP Forest, trained guides, luxury lodges at Tala' },
+    },
+
+    bestMonths: [2, 5] as [number, number],
+    speciality: 'tiger sighting odds',
+    specialityMonths: [3, 6] as [number, number],
+    seasonProse:
+      'February to May offers the best tiger sighting probability. Deciduous trees shed leaves from March, water sources shrink, and tigers are forced into the open near meadows and streams. October to January is pleasant weather but thicker vegetation reduces visibility. Park closes July to September for monsoon. Tuesday is the weekly closure day.',
+
+    trivia: [
+      'Mohan, the world\'s first captive white tiger, was caught in Bandhavgarh\'s forests by the Maharaja of Rewa in 1951. Every white tiger alive today descends from him.',
+      'The Bandhavgarh Fort, perched at 810 m atop the central hill, dates to at least the 1st century AD. It has inscriptions in Brahmi script and a 10th-century Vishnu reclining statue carved into rock.',
+      'Charger, one of Bandhavgarh\'s most famous tigers, was named for his habit of mock-charging elephants and jeeps. He never actually attacked anyone.',
+    ],
+
+    climate: ['subtropical'],
+    terrain: ['hilly', 'dense-forest'],
+    landscapeProse:
+      'A horseshoe of steep sandstone hills encloses a central valley of sal forest and meadow. The Bandhavgarh fort crowns the highest point at 810 m, its walls visible from much of the core zone. Below the hills, grasslands and bamboo thickets line seasonal streams. The Tala zone has the densest forest and the highest prey concentration. By late March, the canopy thins to bare branches, opening dramatic sightlines through the forest.',
+    landscapeImages: [
+      '/images/bandhavgarh-landscape-1.jpg',
+      '/images/bandhavgarh-landscape-2.jpg',
+      '/images/bandhavgarh-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Bengal Tiger',
+    sightingProb: 'near-guaranteed',
+    birdingQuality: 'Rich',
+    animalSpecies: 37,
+    birdingSpecies: 250,
+    wildlifeProse:
+      'Around 135 tigers in the reserve per the 2022 census, concentrated in a compact core. The tourism zone is small enough that repeat sightings of known individuals are common across a 2-day visit. Leopards are present but shy, staying in the hillier terrain. Sloth bears are seen with reasonable frequency, especially around termite mounds. Gaur was reintroduced from Kanha in 2012 and the population has grown to about 170. Chital, sambar, nilgai, wild boar, and four-horned antelope fill the prey base. Birding is rich at 250 species with white-rumped vulture, Malabar pied hornbill, crested serpent eagle, and paradise flycatcher among the highlights.',
+    wildlifeCards: [
+      { name: 'Bengal Tiger', image: '/images/bandhavgarh-wildlife-bengal-tiger.jpg' },
+      { name: 'Sloth Bear', image: '/images/bandhavgarh-wildlife-sloth-bear.jpg' },
+      { name: 'Indian Leopard', image: '/images/bandhavgarh-wildlife-indian-leopard.jpg' },
+      { name: 'Gaur', image: '/images/bandhavgarh-wildlife-gaur.jpg' },
+      { name: 'Sambar Deer', image: '/images/bandhavgarh-wildlife-sambar-deer.jpg' },
+      { name: 'Paradise Flycatcher', image: '/images/bandhavgarh-wildlife-paradise-flycatcher.jpg' },
+    ],
+
+    safari: {
+      types: ['jeep'],
+      bookingRequirement: 'Yes',
+      coreZoneAccess: 'Yes',
+      density: 'High',
+      prose:
+        'Three core zones: Tala (highest tiger density, most popular), Magdhi, and Khitauli. Buffer zones include Panpatha and Dhamokhar. Safaris run in morning and afternoon shifts of about 4 hours. Full-day safaris are available and offer the best experience, keeping you inside the park from dawn to dusk. Book through MP Forest Department portal (mponline.gov.in). Tuesday is the weekly closure.',
+      gates: [
+        { name: 'Tala Gate', qualifier: 'main gate, highest tiger density' },
+        { name: 'Magdhi Gate' },
+        { name: 'Khitauli Gate' },
+      ],
+    },
+
+    networkQuality: 'Poor',
+    stayQuality: 'Luxury',
+    entryFeeINR: 2500,
+    entryFeeForeigner: 4500,
+    practicalProse:
+      'Winter mornings in the open jeep can dip below 5°C, so layer up. March to May crosses 40°C. Carry cash as Tala village has limited ATMs. If Tala zone is sold out, Magdhi and Khitauli offer good alternatives with fewer vehicles. Full-day safaris are worth the premium for serious wildlife viewers.',
+
+    connectivityProse:
+      '32 km from Umaria. Jabalpur airport is 170 km west, Khajuraho airport is 230 km north.',
+    transport: [
+      { icon: 'plane', desc: 'Jabalpur Airport (JLR), 170 km. Flights from Delhi, Mumbai, Bhopal. Taxi to Tala gate takes 3.5 hours.' },
+      { icon: 'train', desc: 'Umaria Railway Station (UMR), 32 km. Direct trains from Delhi, Varanasi, Kolkata, Jabalpur. Taxi to park 45 minutes.' },
+      { icon: 'bus', desc: 'Limited state bus service from Jabalpur and Satna. Not reliable for tight schedules.' },
+      { icon: 'car', desc: 'From Jabalpur via NH44 and state highways (3.5 hours). From Khajuraho via Satna (5 hours).' },
+    ],
+
+    photoProse:
+      'Tala zone\'s open meadows backed by the fort hill make for dramatic compositions. Tigers here are habituated to vehicles, often walking within metres of the jeep, so even a 200-400mm lens delivers frame-filling portraits. Morning light filtering through bare sal canopy in April and May creates strong rim-lit opportunities. The Vishnu reclining statue near the fort is worth photographing for its historical significance.',
   },
   {
     status: 'draft',
@@ -300,12 +395,106 @@ export const parks: Park[] = [
     coordinates: { lat: 22.75, lng: 81 },
   },
   {
-    status: 'draft',
-    id: "gir",
-    name: "Gir Forest National Park",
-    state: "Gujarat",
-    region: "West India",
-    coordinates: { lat: 21.12, lng: 70.79 },
+    status: 'live',
+    id: 'gir',
+    name: 'Gir National Park',
+    state: 'Gujarat',
+    region: 'West India',
+    oneLiner: 'The last wild home of the Asiatic lion, nowhere else on Earth',
+    description:
+      'The only place on the planet where Asiatic lions roam free. Former hunting ground of the Nawabs of Junagadh, now India\'s most successful big-cat conservation story. The 2025 census counted 891 lions across the Gir landscape, up from under 20 in the early 1900s. Dry deciduous teak forest over rugged, hilly terrain in the Saurashtra peninsula, with the Kamleshwar reservoir at its heart.',
+    tags: ['wildlife', 'families', 'photography'],
+    heroImage: '/images/gir.jpg',
+    unescoStatus: false,
+    permitRequired: false,
+
+    established: 1965,
+    areaKm2: 1412,
+    openMonths: [10, 6] as [number, number],
+    elevationRange: [150, 642] as [number, number],
+    recommendedDays: 2,
+    nearestCity: 'Junagadh',
+    nearestCityDistKm: 60,
+    coordinates: { lat: 21.136, lng: 70.797 },
+
+    scores: {
+      wildlife: { score: 8, desc: 'Asiatic lions sighted on most safaris, strong leopard population' },
+      scenic: { score: 6, desc: 'Pleasant teak forest and reservoir, but not dramatic terrain' },
+      accessibility: { score: 5, desc: 'Rajkot airport 160 km, or Junagadh by train then taxi' },
+      crowdLevel: { score: 4, desc: 'Permits sell out weeks ahead in peak season' },
+      remoteness: { score: 5, desc: 'Sasan Gir village has basic facilities, Junagadh is the nearest city' },
+      infrastructure: { score: 7, desc: 'Online booking, trained guides, Devaliya interpretation zone as backup' },
+    },
+
+    bestMonths: [12, 3] as [number, number],
+    speciality: 'Asiatic lion',
+    specialityMonths: [12, 4] as [number, number],
+    seasonProse:
+      'December to March is ideal. Cool weather, thinning undergrowth, and lions resting in open clearings near water. April and May are scorching but sighting odds stay high as animals cluster around water bodies. The park closes mid-June to mid-October for monsoon. Devaliya Safari Park (interpretation zone) stays open year-round except Wednesdays.',
+
+    trivia: [
+      'Asiatic lion numbers dropped to under 20 in the early 1900s. The 2025 census counted 891 across the Gir landscape, one of the greatest conservation recoveries for any large carnivore.',
+      'Gir is the only ecosystem in the world where lions and leopards coexist in significant numbers. Leopard density here is among the highest in India.',
+      'The Maldhari pastoralists have coexisted with lions for centuries inside the sanctuary. About 10,000 Maldharis still live within or near the protected area, grazing cattle alongside wild ungulates.',
+    ],
+
+    climate: ['semi-arid'],
+    terrain: ['hilly', 'dense-forest'],
+    landscapeProse:
+      'Dry deciduous teak forest with patches of thorny scrub and seasonal grassland. Rocky ridges and ravines create a rumpled terrain that flattens out near the Kamleshwar reservoir, the park\'s main water body and a gathering point for wildlife. Rivers like the Hiran, Machhundri, and Shetrunji cut through the sanctuary. In summer, most trees shed their leaves, opening up sightlines dramatically. The landscape is not conventionally dramatic but has a quiet, rugged beauty.',
+    landscapeImages: [
+      '/images/gir-landscape-1.jpg',
+      '/images/gir-landscape-2.jpg',
+      '/images/gir-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Asiatic Lion',
+    sightingProb: 'likely',
+    birdingQuality: 'Rich',
+    animalSpecies: 38,
+    birdingSpecies: 300,
+    wildlifeProse:
+      'Asiatic lions are the undisputed draw. Prides of 3 to 5 are commonly spotted resting under teak trees or near waterholes. The park also has a large leopard population that coexists with the lions by staying in peripheral, more rugged terrain. Marsh crocodiles are reliably seen at Kamleshwar Dam. Spotted deer, sambar, nilgai, wild boar, and four-horned antelope make up the prey base. Striped hyena and Indian wolf are present but rarely seen. Birding is rich at 300 species, with six vulture species (of India\'s nine), Indian pitta, crested serpent eagle, and a strong winter waterbird population at the reservoir.',
+    wildlifeCards: [
+      { name: 'Asiatic Lion', image: '/images/gir-wildlife-asiatic-lion.jpg' },
+      { name: 'Indian Leopard', image: '/images/gir-wildlife-indian-leopard.jpg' },
+      { name: 'Marsh Crocodile', image: '/images/gir-wildlife-marsh-crocodile.jpg' },
+      { name: 'Striped Hyena', image: '/images/gir-wildlife-striped-hyena.jpg' },
+      { name: 'Spotted Deer', image: '/images/gir-wildlife-spotted-deer.webp' },
+      { name: 'Indian Pitta', image: '/images/gir-wildlife-indian-pitta.jpg' },
+    ],
+
+    safari: {
+      types: ['jeep'],
+      bookingRequirement: 'Yes',
+      coreZoneAccess: 'Yes',
+      density: 'Moderate',
+      prose:
+        'Jungle Trail safaris run three times daily: morning (6-9 AM), mid-morning (9 AM-12 PM), and afternoon (3-6 PM). Six-seater open gypsies with an assigned guide. Permits booked online through girlion.in. Devaliya Safari Park is a fenced 4 km² interpretation zone offering guaranteed lion sightings on a shorter 1-hour bus ride, useful as a backup if core permits are unavailable. Wednesday is the weekly closure for Devaliya.',
+      gates: [
+        { name: 'Sinh Sadan', qualifier: 'main gate, Sasan Gir village' },
+        { name: 'Devaliya', qualifier: 'interpretation zone, fenced area' },
+      ],
+    },
+
+    networkQuality: 'Decent',
+    stayQuality: 'Mid-range',
+    entryFeeINR: 800,
+    entryFeeForeigner: 2500,
+    practicalProse:
+      'Summers are brutal, regularly crossing 45°C. Carry water and sunscreen for afternoon safaris. Cash useful in Sasan Gir village. If core permits are sold out, Devaliya is a reliable fallback for lion sightings. Pair Gir with a visit to Somnath temple (55 km) for a two-destination trip.',
+
+    connectivityProse:
+      '60 km from Junagadh, 160 km from Rajkot, 370 km from Ahmedabad. Park headquarters at Sasan Gir village.',
+    transport: [
+      { icon: 'plane', desc: 'Rajkot Airport (RAJ), 160 km. Flights from Mumbai and Delhi. Taxi to Sasan Gir takes 3 hours.' },
+      { icon: 'train', desc: 'Junagadh Junction, 60 km. Trains from Ahmedabad and Rajkot. Sasan Gir also has a small railway halt on the Junagadh-Veraval line.' },
+      { icon: 'bus', desc: 'Gujarat GSRTC buses from Ahmedabad (7 hours), Rajkot (3 hours), and Junagadh (1.5 hours) to Sasan Gir.' },
+      { icon: 'car', desc: 'NH-8E from Ahmedabad via Rajkot (6-7 hours). From Junagadh, state highway to Sasan Gir (1 hour).' },
+    ],
+
+    photoProse:
+      'Lions resting under teak trees in dappled light is the classic Gir shot. A 200-400mm lens covers most situations as sighting distances are moderate. Kamleshwar Dam at golden hour is excellent for waterbird and crocodile photography. Leopards are harder to photograph but occasionally seen in the hillier eastern zones.',
   },
   {
     status: 'draft',
@@ -324,12 +513,107 @@ export const parks: Park[] = [
     coordinates: { lat: 31.07, lng: 78.12 },
   },
   {
-    status: 'draft',
-    id: "great-himalayan",
-    name: "Great Himalayan National Park",
-    state: "Himachal Pradesh",
-    region: "North India",
-    coordinates: { lat: 31.76, lng: 77.45 },
+    status: 'live',
+    id: 'great-himalayan',
+    name: 'Great Himalayan National Park',
+    state: 'Himachal Pradesh',
+    region: 'North India',
+    oneLiner: 'A UNESCO-listed western Himalayan wilderness accessible only on foot',
+    description:
+      'Four pristine river valleys (Tirthan, Sainj, Jiwa Nal, Parvati) rising from temperate forest to alpine meadows and glaciers across a 4,100 m elevation range. No roads enter the park. All exploration is by multi-day trek through dense deodar, blue pine, and birch forests into high pastures where western tragopan and snow leopard roam. UNESCO World Heritage Site since 2014, recognised for outstanding biodiversity at the junction of the Indomalayan and Palearctic biogeographic realms.',
+    tags: ['trekking', 'expedition', 'birding'],
+    heroImage: '/images/gh.jpg',
+    unescoStatus: true,
+    permitRequired: true,
+    permitDescription: 'Trekking permits issued by GHNP office at Sairopa or Shamshi (Kullu). Certified local guide required.',
+
+    established: 1984,
+    areaKm2: 1171,
+    openMonths: [4, 11] as [number, number],
+    elevationRange: [1500, 6000] as [number, number],
+    recommendedDays: 5,
+    nearestCity: 'Kullu',
+    nearestCityDistKm: 60,
+    coordinates: { lat: 31.733, lng: 77.550 },
+
+    scores: {
+      wildlife: { score: 5, desc: 'Rich mammal list but dense forest and high altitude make sightings uncommon' },
+      scenic: { score: 10, desc: 'Glacial valleys, alpine meadows, deodar forests, 6,000 m peaks' },
+      accessibility: { score: 3, desc: 'No roads inside the park, multi-day treks from the boundary' },
+      crowdLevel: { score: 8, desc: 'Very few trekkers compared to mainstream Himalayan treks' },
+      remoteness: { score: 8, desc: 'No habitation inside the park, no phone signal beyond the gate' },
+      infrastructure: { score: 4, desc: 'Basic camping, local guides, eco-tourism homestays in buffer villages' },
+    },
+
+    bestMonths: [5, 6] as [number, number],
+    speciality: 'western tragopan',
+    specialityMonths: [4, 6] as [number, number],
+    seasonProse:
+      'April to June is the primary trekking window. Snow melts at lower elevations, wildflowers bloom, and western tragopan breeding calls are heard in the forests. September to November is the second window, with clear post-monsoon skies and animals descending to lower altitudes. July and August bring heavy monsoon rain, landslides, and leech-infested trails. December to March sees heavy snowfall above 2,500 m, restricting access to lower valley walks only.',
+
+    trivia: [
+      'GHNP sits at the junction of the Indomalayan and Palearctic biogeographic realms, hosting species from both. It shelters 26 Himalayan species and 42 species typical of the Western Ghats and Nilgiris.',
+      'The western tragopan, the rarest of the five tragopan pheasants and among the most endangered birds globally, has one of its last strongholds in this park.',
+      'It took 20 years from the first survey (1980) to formal national park status (1999 notification). UNESCO listing came in 2014.',
+    ],
+
+    climate: ['temperate'],
+    terrain: ['mountainous', 'dense-forest'],
+    landscapeProse:
+      'Four parallel river valleys cut deep into the western Himalaya, each rising from temperate broadleaf forest at 1,500 m through dense conifer belts of deodar, blue pine, spruce, and fir, into birch and rhododendron zones, then alpine meadow, and finally rock, ice, and glaciers above 4,500 m. The valleys are steep-sided with narrow gorges at the lower end, opening into wide U-shaped glacial basins higher up. No roads, no power lines, no buildings inside the park. The silence and scale are complete.',
+    landscapeImages: [
+      '/images/gh-landscape-1.jpg',
+      '/images/gh-landscape-2.jpg',
+      '/images/gh-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Western Tragopan',
+    sightingProb: 'rare',
+    birdingQuality: 'Rich',
+    animalSpecies: 31,
+    birdingSpecies: 181,
+    wildlifeProse:
+      "The western tragopan is the park's most important species and one of the world's rarest pheasants. Sightings are uncommon but breeding calls are heard in spring in the upper Tirthan and Sainj valleys. Snow leopard, Himalayan brown bear, Himalayan black bear, musk deer, Himalayan tahr, bharal, serow, and goral make up the mammal list. All are elusive in dense forest. Himalayan monal, koklass pheasant, cheer pheasant, and four other pheasant species are present. Raptors include golden eagle, lammergeier, and Himalayan griffon vulture. The 181 bird species span Himalayan to Palearctic ranges.",
+    wildlifeCards: [
+      { name: 'Western Tragopan', image: '/images/gh-wildlife-western-tragopan.jpg' },
+      { name: 'Snow Leopard', image: '/images/gh-wildlife-snow-leopard.jpg' },
+      { name: 'Himalayan Brown Bear', image: '/images/gh-wildlife-himalayan-brown-bear.jpg' },
+      { name: 'Himalayan Monal', image: '/images/gh-wildlife-himalayan-monal.jpg' },
+      { name: 'Himalayan Tahr', image: '/images/gh-wildlife-himalayan-tahr.jpg' },
+      { name: 'Musk Deer', image: '/images/gh-wildlife-musk-deer.jpg' },
+    ],
+
+    safari: {
+      types: ['walking'],
+      bookingRequirement: 'Yes',
+      coreZoneAccess: 'Yes',
+      density: 'Low',
+      prose:
+        'All exploration is on foot. No vehicles allowed inside the park. Treks range from 1-day nature walks in the Tirthan valley to 7-day expeditions crossing the Pin-Parvati Pass (5,319 m). Trekking permits are mandatory and obtained from the GHNP office at Sairopa or Shamshi (Kullu). Certified local guides are required. Popular routes: Tirthan Valley (3 to 5 days), Sainj Valley (4 to 6 days), and the Tirthan to Parvati crossing (6 to 7 days).',
+      gates: [
+        { name: 'Sairopa', qualifier: 'Tirthan valley, main entry' },
+        { name: 'Ropa', qualifier: 'Sainj valley entry' },
+      ],
+    },
+
+    networkQuality: 'None',
+    stayQuality: 'Homestays',
+    entryFeeINR: 50,
+    entryFeeForeigner: 200,
+    practicalProse:
+      'Carry all gear including tents, sleeping bags, and food for multi-day treks. No shops or facilities inside the park. Hire a local guide through the eco-tourism cooperative at Sairopa. Leeches are a problem in early and late season. Altitude sickness is a risk on high-altitude routes above 4,000 m. Buffer zone villages like Gushaini and Banjar have excellent homestays.',
+
+    connectivityProse:
+      '60 km from Kullu, 50 km from Bhuntar airport. Park boundary accessed from Tirthan or Sainj valley roads. No motor access inside.',
+    transport: [
+      { icon: 'plane', desc: 'Bhuntar Airport (KUU), 50 km. Flights from Delhi and Chandigarh. Taxi to Sairopa or Gushaini takes 2 hours.' },
+      { icon: 'train', desc: 'Joginder Nagar, 143 km, is the nearest narrow-gauge railhead. Chandigarh (290 km) has better connectivity. Then bus or taxi.' },
+      { icon: 'bus', desc: 'HRTC buses from Delhi to Kullu (12 hours) or Chandigarh to Kullu (8 hours). Then local bus to Banjar and Gushaini.' },
+      { icon: 'car', desc: 'From Delhi via Chandigarh and Mandi to Aut, then Banjar road to Gushaini (12 to 14 hours). From Kullu via Banjar (2 hours).' },
+    ],
+
+    photoProse:
+      'Wide-angle lenses dominate here. Alpine meadows with snow peaks behind, deodar forests in morning mist, and glacial streams are the signature compositions. For western tragopan and monal, a 300-500mm lens is needed, but sightings are unpredictable. Spring wildflowers in the upper valleys photograph beautifully at close range. Carry weather protection for gear as conditions change fast at altitude.',
   },
   {
     status: 'draft',
@@ -748,12 +1032,103 @@ export const parks: Park[] = [
       "Golden morning light over the grasslands is Kaziranga's signature shot. Rhinos are cooperative subjects at close range from jeep height. A 100-400mm lens covers most situations. Agaratoli (Eastern zone) is favoured by photographers for its Brahmaputra backdrop and fewer vehicles.",
   },
   {
-    status: 'draft',
-    id: "keibul-lamjao",
-    name: "Keibul Lamjao National Park",
-    state: "Manipur",
-    region: "Northeast India",
-    coordinates: { lat: 24.49, lng: 93.78 },
+    status: 'live',
+    id: 'keibul-lamjao',
+    name: 'Keibul Lamjao National Park',
+    state: 'Manipur',
+    region: 'Northeast India',
+    oneLiner: "The world's only floating national park, last refuge of the sangai deer",
+    description:
+      "A 40 km² mass of floating phumdi (decomposed vegetation) on Loktak Lake, northeast India's largest freshwater lake. Created to protect the sangai, Manipur's brow-antlered dancing deer, which walks on these floating mats on specially adapted hooves. Declared extinct in 1951, rediscovered in 1953, and still critically low in numbers.",
+    tags: ['wildlife', 'birding'],
+    heroImage: '/images/keibul-lamjao.jpg',
+    unescoStatus: false,
+    permitRequired: false,
+
+    established: 1977,
+    areaKm2: 40,
+    openMonths: [10, 3] as [number, number],
+    elevationRange: [768, 817] as [number, number],
+    recommendedDays: 1,
+    nearestCity: 'Imphal',
+    nearestCityDistKm: 53,
+    coordinates: { lat: 24.500, lng: 93.767 },
+
+    scores: {
+      wildlife: { score: 5, desc: 'Sangai sightings possible with patience and binoculars' },
+      scenic: { score: 7, desc: 'Floating grasslands on a vast lake, unlike anything else' },
+      accessibility: { score: 5, desc: 'Imphal airport 53 km, then taxi to park gate' },
+      crowdLevel: { score: 8, desc: 'Very few tourists visit Manipur at all' },
+      remoteness: { score: 6, desc: 'Moirang town nearby, but Manipur itself is remote' },
+      infrastructure: { score: 4, desc: 'Watchtowers, boat rides, two rest houses, basic guides' },
+    },
+
+    bestMonths: [11, 2] as [number, number],
+    speciality: 'sangai deer',
+    specialityMonths: [11, 2] as [number, number],
+    seasonProse:
+      'November to February is best. Cool weather, low water, and sangai come out to feed on exposed phumdi in early morning and late afternoon. Monsoon (June to September) floods the park and makes access difficult.',
+
+    trivia: [
+      'Only floating national park in the world. The ground is decomposed vegetation called phumdi, thick enough to walk on.',
+      'Sangai were declared extinct in 1951. Rediscovered in 1953. Population peaked at 260 in 2016 but dropped to around 64 by 2023.',
+      "On UNESCO's tentative list as Keibul Lamjao Conservation Area. Loktak Lake is a Ramsar wetland site.",
+    ],
+
+    climate: ['subtropical'],
+    terrain: ['wetland', 'flat'],
+    landscapeProse:
+      'Floating mats of vegetation stretching to the horizon on Loktak Lake. The phumdi is a spongy, uneven surface of decomposed organic matter topped with tall grass and reeds. Three small hills, Pabot, Toya, and Chingjao, break the flatness and serve as dry refuge for animals during monsoon. Open water channels cut through the green expanse.',
+    landscapeImages: [
+      '/images/keibul-lamjao-landscape-1.jpg',
+      '/images/keibul-lamjao-landscape-2.jpg',
+      '/images/keibul-lamjao-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Sangai Deer',
+    sightingProb: 'possible',
+    birdingQuality: 'Good',
+    animalSpecies: null,
+    birdingSpecies: 100,
+    wildlifeProse:
+      'Sangai deer are shy and best spotted from watchtowers or by boat in early morning. Around 64 individuals remain (2023 WII estimate). Hog deer are more numerous. Wild boar, otters, large Indian civet, and small Indian civet complete the mammal list. Migratory waterfowl arrive November to March, including black-necked stork, ferruginous pochard, and spot-billed pelican.',
+    wildlifeCards: [
+      { name: 'Sangai Deer', image: '/images/keibul-lamjao-wildlife-sangai-deer.jpg' },
+      { name: 'Hog Deer', image: '/images/keibul-lamjao-wildlife-hog-deer.jpg' },
+      { name: 'Black-necked Stork', image: '/images/keibul-lamjao-wildlife-black-necked-stork.jpg' },
+      { name: 'Common Otter', image: '/images/keibul-lamjao-wildlife-common-otter.jpg' },
+    ],
+
+    safari: {
+      types: ['boat', 'walking'],
+      bookingRequirement: 'Yes',
+      coreZoneAccess: 'Yes',
+      density: 'Low',
+      prose:
+        'Boat rides from the park entrance navigate phumdi channels for 1-2 hours. Walking on the phumdi is possible with guides but the ground is spongy and uneven. Watchtowers on Pabot Hill offer scanning views. Best between 6 and 10 AM.',
+      gates: [
+        { name: 'Keibul Lamjao Gate', qualifier: '6 km south of Moirang' },
+      ],
+    },
+
+    networkQuality: 'Poor',
+    stayQuality: 'Budget',
+    entryFeeINR: 50,
+    entryFeeForeigner: 250,
+    practicalProse:
+      'Carry binoculars. Sangai are distant and skittish. Sturdy footwear for phumdi walks. No food vendors inside. Combine with Loktak Lake and the INA Memorial at Moirang for a full day trip from Imphal.',
+
+    connectivityProse:
+      '53 km from Imphal, 6 km south of Moirang. Park entrance on the Kumbi road.',
+    transport: [
+      { icon: 'plane', desc: 'Imphal Airport (IMF), 53 km. Flights from Delhi, Kolkata, Guwahati. Taxi 1.5 hours.' },
+      { icon: 'train', desc: 'No railway in Manipur yet. Nearest station Dimapur (Nagaland), 215 km.' },
+      { icon: 'bus', desc: 'Manipur state buses from Imphal to Moirang (1.5 hours). Autorickshaw to park gate.' },
+      { icon: 'car', desc: 'NH2 from Imphal via Bishnupur to Moirang (1.5 hours). Then 6 km to park entrance.' },
+    ],
+
+    photoProse:
+      'Sangai are distant subjects. A 500-600mm lens is essential. Morning light on the phumdi with mist rising off Loktak Lake is the signature shot. Boat gives better angles than the watchtower.',
   },
   {
     status: 'draft',
@@ -828,12 +1203,106 @@ export const parks: Park[] = [
     coordinates: { lat: 17.33, lng: 78.55 },
   },
   {
-    status: 'draft',
-    id: "manas",
-    name: "Manas National Park",
-    state: "Assam",
-    region: "Northeast India",
-    coordinates: { lat: 26.66, lng: 91 },
+    status: 'live',
+    id: 'manas',
+    name: 'Manas National Park',
+    state: 'Assam',
+    region: 'Northeast India',
+    oneLiner: 'A UNESCO comeback story at the Bhutan border, home to the last wild pygmy hogs',
+    description:
+      "Foothills grassland and semi-evergreen forest along the Manas river, which forms the border with Bhutan's Royal Manas National Park. UNESCO World Heritage Site since 1985, placed on the danger list in 1992 after insurgency wiped out its rhinos. Removed in 2011 after a remarkable recovery. Shelters several species found nowhere else on Earth.",
+    tags: ['wildlife', 'birding'],
+    heroImage: '/images/manas.jpg',
+    unescoStatus: true,
+    permitRequired: false,
+
+    established: 1990,
+    areaKm2: 850,
+    openMonths: [11, 4] as [number, number],
+    elevationRange: [61, 110] as [number, number],
+    recommendedDays: 2,
+    nearestCity: 'Barpeta Road',
+    nearestCityDistKm: 44,
+    coordinates: { lat: 26.717, lng: 90.933 },
+
+    scores: {
+      wildlife: { score: 7, desc: 'Rhinos reintroduced, tigers recovering, unmatched endemics' },
+      scenic: { score: 7, desc: 'Manas river with Bhutan Himalayan foothills behind' },
+      accessibility: { score: 4, desc: 'Guwahati 176 km, then 3.5 hours by road' },
+      crowdLevel: { score: 8, desc: 'Very few tourists, far less visited than Kaziranga' },
+      remoteness: { score: 7, desc: 'Deep in Bodoland, minimal facilities outside lodges' },
+      infrastructure: { score: 5, desc: 'Jeep and elephant safaris, basic lodges, limited guides' },
+    },
+
+    bestMonths: [1, 3] as [number, number],
+    speciality: 'pygmy hog',
+    specialityMonths: [1, 3] as [number, number],
+    seasonProse:
+      'January to March is best. Burnt grasslands expose wildlife and migratory birds arrive in large numbers. November and December are good but grass can be tall. Park closes May to October for monsoon flooding.',
+
+    trivia: [
+      'The pygmy hog (25 cm tall) survives in the wild only here and at a few reintroduction sites stocked from Manas.',
+      'UNESCO danger-listed from 1992 to 2011 after Bodo insurgency eliminated all rhinos. Since reintroduced from Kaziranga.',
+      'The Manas river marks the India-Bhutan border, creating a transboundary protected area of over 2,800 km².',
+    ],
+
+    climate: ['subtropical'],
+    terrain: ['flat', 'wetland'],
+    landscapeProse:
+      'Flat alluvial floodplain at the base of the Bhutan Himalayas. Tall elephant grass and savanna dominate the south, transitioning to semi-evergreen and riverine forest along the Manas river. The river is wide, braided, and turquoise in winter, running against the steep Bhutanese foothills. Monsoon flooding reshapes the landscape every year.',
+    landscapeImages: [
+      '/images/manas-landscape-1.jpg',
+      '/images/manas-landscape-2.jpg',
+      '/images/manas-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Pygmy Hog',
+    sightingProb: 'rare',
+    birdingQuality: 'Exceptional',
+    animalSpecies: 55,
+    birdingSpecies: 450,
+    wildlifeProse:
+      "Pygmy hog is the headline species but almost impossible to spot in tall grass. Golden langur is more reliable in the canopy along the river. About 45 reintroduced rhinos and 9 to 12 tigers. Wild water buffalo, clouded leopard, hispid hare, and Assam roofed turtle add to the endemic list. Birding is exceptional at 450 species, with the world's largest Bengal florican population.",
+    wildlifeCards: [
+      { name: 'Pygmy Hog', image: '/images/manas-wildlife-pygmy-hog.jpg' },
+      { name: 'Golden Langur', image: '/images/manas-wildlife-golden-langur.jpg' },
+      { name: 'Indian Rhinoceros', image: '/images/manas-wildlife-indian-rhinoceros.jpg' },
+      { name: 'Bengal Florican', image: '/images/manas-wildlife-bengal-florican.jpg' },
+      { name: 'Wild Water Buffalo', image: '/images/manas-wildlife-wild-water-buffalo.jpg' },
+      { name: 'Asian Elephant', image: '/images/manas-wildlife-asian-elephant.jpg' },
+    ],
+
+    safari: {
+      types: ['jeep', 'elephant'],
+      bookingRequirement: 'Yes',
+      coreZoneAccess: 'Yes',
+      density: 'Low',
+      prose:
+        'Three ranges: Bansbari (central, main entry), Panbari (west), Bhuiapara (east). Jeep safaris from Bansbari in morning and afternoon. Elephant safaris from Mathanguri go deeper into grasslands for rhino sightings. Permits at the Bansbari range office.',
+      gates: [
+        { name: 'Bansbari', qualifier: 'central range, main entry' },
+        { name: 'Bhuiapara', qualifier: 'eastern range' },
+      ],
+    },
+
+    networkQuality: 'Poor',
+    stayQuality: 'Budget',
+    entryFeeINR: 20,
+    entryFeeForeigner: 250,
+    practicalProse:
+      'Carry mosquito repellent. Winter mornings are foggy and cold in the open jeep. Cash only. Accommodation is basic: forest rest houses and community cottages. Combine with Kaziranga (350 km east) for a two-park itinerary.',
+
+    connectivityProse:
+      '176 km from Guwahati, 44 km from Barpeta Road. Main entry at Bansbari gate.',
+    transport: [
+      { icon: 'plane', desc: 'Guwahati Airport (GAU), 176 km. Taxi to Bansbari takes 3.5 hours.' },
+      { icon: 'train', desc: 'Barpeta Road station, 44 km. Trains from Guwahati, Kolkata, Delhi. Taxi to park.' },
+      { icon: 'bus', desc: 'Assam state buses from Guwahati to Barpeta Road (3 hours). Local transport to gate.' },
+      { icon: 'car', desc: 'NH27 from Guwahati via Nalbari to Barpeta Road, then to Bansbari (3.5 hours).' },
+    ],
+
+    photoProse:
+      'Manas river with Bhutan foothills is a strong landscape subject. Golden langur portraits need a 400mm lens. Rhino photography requires elephant-back access. Bengal florican displaying in February and March is one of the rarest bird photography opportunities in India.',
   },
   {
     status: 'draft',
@@ -924,12 +1393,106 @@ export const parks: Park[] = [
     coordinates: { lat: 23.63, lng: 93.3 },
   },
   {
-    status: 'draft',
-    id: "nagarhole",
-    name: "Nagarhole National Park",
-    state: "Karnataka",
-    region: "South India",
-    coordinates: { lat: 12.05, lng: 76.1 },
+    status: 'live',
+    id: 'nagarhole',
+    name: 'Nagarhole National Park',
+    state: 'Karnataka',
+    region: 'South India',
+    oneLiner: 'Where the Deccan Plateau meets the Western Ghats, with the world\'s best black panther sightings',
+    description:
+      'Part of the largest contiguous protected forest in South India, connected to Bandipur, Mudumalai, and Wayanad across four states. Former hunting ground of the Mysore Wodeyar kings. The Kabini reservoir on the park\'s southern edge draws massive elephant herds in summer and has become India\'s most reliable location for melanistic leopard (black panther) sightings. Tiger density here is among the highest anywhere.',
+    tags: ['wildlife', 'birding', 'photography'],
+    heroImage: '/images/nagarhole.jpg',
+    unescoStatus: true,
+    permitRequired: false,
+
+    established: 1988,
+    areaKm2: 643,
+    openMonths: [10, 5] as [number, number],
+    elevationRange: [687, 960] as [number, number],
+    recommendedDays: 2,
+    nearestCity: 'Mysuru',
+    nearestCityDistKm: 80,
+    coordinates: { lat: 12.06, lng: 76.151 },
+
+    scores: {
+      wildlife: { score: 9, desc: 'Three big predators coexist at high density, massive elephant herds' },
+      scenic: { score: 8, desc: 'Kabini backwaters, moist deciduous forest, Western Ghat foothills' },
+      accessibility: { score: 7, desc: '4 hours from Bengaluru, 2 hours from Mysuru' },
+      crowdLevel: { score: 5, desc: 'Kabini side is popular, northern Nagarhole gate is quieter' },
+      remoteness: { score: 5, desc: 'Well-connected by road, luxury resorts along Kabini' },
+      infrastructure: { score: 7, desc: 'Jeep and boat safaris, government and private lodges, good guides' },
+    },
+
+    bestMonths: [10, 2] as [number, number],
+    speciality: 'black panther',
+    specialityMonths: [3, 5] as [number, number],
+    seasonProse:
+      'October to February is the most comfortable season with cool weather and lush post-monsoon forest. March to May is hot but excellent for wildlife as water sources dry up and animals concentrate along the Kabini backwaters. Summer is also the best window for black panther sightings. The park closes June to September for monsoon.',
+
+    trivia: [
+      'Nagarhole, Bandipur, Mudumalai, and Wayanad together form the Nilgiri Biosphere Reserve, roughly 2,200 km² of connected forest spanning four states.',
+      'Each summer, 600 to 800 Asian elephants gather along the Kabini backwaters, the largest known congregation of Asian elephants at a single site.',
+      'The park\'s name means \'snake stream\' in Kannada (naga = snake, hole = stream), referring to the many winding rivulets that run through the forest.',
+    ],
+
+    climate: ['tropical-wet', 'tropical-dry'],
+    terrain: ['hilly', 'dense-forest'],
+    landscapeProse:
+      'Moist and dry deciduous forest with teak, rosewood, and sandalwood as dominant canopy species. Bamboo thickets break up the understorey, especially in the southern ranges. The terrain is gently undulating with shallow valleys carved by the Kabini, Lakshmana Teertha, and Nagarhole rivers. The Kabini reservoir along the southern boundary creates a dramatic open shoreline in summer, backed by dense forest. Monsoon transforms the landscape into deep green with seasonal streams running full.',
+    landscapeImages: [
+      '/images/nagarhole-landscape-1.jpg',
+      '/images/nagarhole-landscape-2.jpg',
+      '/images/nagarhole-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Bengal Tiger',
+    sightingProb: 'likely',
+    birdingQuality: 'Exceptional',
+    animalSpecies: 50,
+    birdingSpecies: 270,
+    wildlifeProse:
+      'Tiger, leopard, and dhole coexist here at high densities, making Nagarhole one of the richest predator landscapes in Asia. Around 60 to 70 tigers in the reserve, with Kabini and Antharasanthe ranges being the best zones for sightings. Melanistic leopards (black panthers) are seen regularly at Kabini, particularly in summer. Asian elephant herds of 50 to 100 are common. Gaur, sambar, chital, wild boar, and four-horned antelope make up the prey base. Sloth bears are present but shy. Birding is excellent at 270 species, with Malabar pied hornbill, grey-headed fish eagle, changeable hawk-eagle, Malabar trogon, and blue-bearded bee-eater among the highlights.',
+    wildlifeCards: [
+      { name: 'Bengal Tiger', image: '/images/nagarhole-wildlife-bengal-tiger.jpg' },
+      { name: 'Black Panther', image: '/images/nagarhole-wildlife-black-panther.jpg' },
+      { name: 'Asian Elephant', image: '/images/nagarhole-wildlife-asian-elephant.jpg' },
+      { name: 'Dhole', image: '/images/nagarhole-wildlife-dhole.jpg' },
+      { name: 'Gaur', image: '/images/nagarhole-wildlife-gaur.jpg' },
+      { name: 'Malabar Pied Hornbill', image: '/images/nagarhole-wildlife-malabar-pied-hornbill.jpg' },
+    ],
+
+    safari: {
+      types: ['jeep', 'boat'],
+      bookingRequirement: 'Yes',
+      coreZoneAccess: 'Yes',
+      density: 'Moderate',
+      prose:
+        'Two safari access points: the Nagarhole gate (north) for jeep safaris into the core forest, and the Kabini side (south) for both jeep and boat safaris along the reservoir. Jeep safaris run in morning and afternoon shifts of about 2 hours. Boat safaris on the Kabini are run by the forest department and private lodges. Bus (canter) safaris also available from the main gate. No online booking for the forest department safaris; tickets at the gate or through lodges.',
+      gates: [
+        { name: 'Nagarhole Gate', qualifier: 'northern entry, jeep and bus safaris' },
+        { name: 'Kabini', qualifier: 'southern entry, jeep and boat safaris' },
+      ],
+    },
+
+    networkQuality: 'Decent',
+    stayQuality: 'Luxury',
+    entryFeeINR: 150,
+    entryFeeForeigner: 1500,
+    practicalProse:
+      'The Kabini side has luxury resorts (Orange County, Evolve Back, Red Earth) while the Nagarhole gate side is more budget-friendly with forest department lodges. Summer afternoons cross 35°C in the open jeep. Carry binoculars. Cash useful at the Nagarhole gate area, though Kabini resorts accept cards.',
+
+    connectivityProse:
+      '80 km from Mysuru, 220 km from Bengaluru. Two access sides: Nagarhole gate via Hunsur, Kabini via HD Kote.',
+    transport: [
+      { icon: 'plane', desc: 'Mysore Airport (MYQ), 80 km. Limited flights. Bengaluru Airport (BLR), 240 km, is the practical choice. Taxi 4 to 5 hours.' },
+      { icon: 'train', desc: 'Mysuru Junction, 80 km. Well-connected to Bengaluru and Chennai. Taxi to park.' },
+      { icon: 'bus', desc: 'KSRTC buses from Bengaluru and Mysuru to Hunsur or HD Kote. Then local taxi to the gate.' },
+      { icon: 'car', desc: 'Bengaluru via Mysuru Road (SH17) to Hunsur, then to Nagarhole gate (4 to 5 hours). Or via HD Kote for Kabini side.' },
+    ],
+
+    photoProse:
+      'Kabini backwaters in summer are among India\'s best wildlife photography locations. Morning boat safaris offer clean reflections of elephants and deer at the water\'s edge. The black panther is typically shot at range through dense foliage, so a 500-600mm lens helps. Forest safaris reward with dappled light on tigers and gaur. Malabar pied hornbills are cooperative subjects along the Kabini shore.',
   },
   {
     status: 'draft',
@@ -948,12 +1511,106 @@ export const parks: Park[] = [
     coordinates: { lat: 26.94, lng: 92.79 },
   },
   {
-    status: 'draft',
-    id: "nanda-devi",
-    name: "Nanda Devi National Park",
-    state: "Uttarakhand",
-    region: "North India",
-    coordinates: { lat: 30.41, lng: 79.92 },
+    status: 'live',
+    id: 'nanda-devi',
+    name: 'Nanda Devi National Park',
+    state: 'Uttarakhand',
+    region: 'North India',
+    oneLiner: "A glacial fortress around India's second-highest peak, closed for 40 years",
+    description:
+      'A ring of peaks above 6,000 m encircling a glacial basin with Nanda Devi (7,817 m) at its centre. Closed to all entry in 1983 after trekking damaged the ecosystem. Sealed for three decades. Limited outer-zone access has recently resumed. UNESCO World Heritage Site since 1988, paired with Valley of Flowers.',
+    tags: ['trekking', 'expedition'],
+    heroImage: '/images/nanda-devi.jpg',
+    unescoStatus: true,
+    permitRequired: true,
+    permitDescription: 'Forest Department permit from Joshimath required. Foreign nationals may need additional Home Ministry clearance.',
+
+    established: 1982,
+    areaKm2: 630,
+    openMonths: [5, 10] as [number, number],
+    elevationRange: [3500, 7817] as [number, number],
+    recommendedDays: 5,
+    nearestCity: 'Joshimath',
+    nearestCityDistKm: 24,
+    coordinates: { lat: 30.419, lng: 79.850 },
+
+    scores: {
+      wildlife: { score: 4, desc: 'Snow leopard and bharal present, almost never seen' },
+      scenic: { score: 10, desc: '7,800 m peak ringed by 6,000 m walls and glaciers' },
+      accessibility: { score: 2, desc: 'Multi-day trek from Lata, inner sanctuary closed' },
+      crowdLevel: { score: 9, desc: 'Strict visitor caps, almost no tourists' },
+      remoteness: { score: 10, desc: 'No habitation, no trails, total wilderness' },
+      infrastructure: { score: 2, desc: 'Nothing inside, carry everything in and out' },
+    },
+
+    bestMonths: [5, 6] as [number, number],
+    speciality: 'high-altitude wilderness',
+    specialityMonths: [5, 6] as [number, number],
+    seasonProse:
+      'May and June offer clear pre-monsoon skies with snow melting at lower passes. September and October are crisp and cold but visible. July and August bring dangerous rain. November to April is buried in snow.',
+
+    trivia: [
+      'Inner sanctuary closed since 1983 after trekking damage. One of the strictest conservation closures in history.',
+      "Nanda Devi (7,817 m) was once thought the world's highest peak. Still India's second-highest after Kangchenjunga.",
+      'The Rishi Ganga Gorge was first navigated in 1934 by Shipton and Tilman. One of the deepest gorges on Earth.',
+    ],
+
+    climate: ['alpine'],
+    terrain: ['mountainous', 'glacial'],
+    landscapeProse:
+      "A continuous wall of peaks between 6,000 m and 7,500 m encircles a glacial basin on three sides. The Rishi Ganga drains westward through one of the world's deepest gorges. Alpine meadows, moraine fields, glaciers, then the twin summits of Nanda Devi. Below the sanctuary wall, birch, juniper, and rhododendron cling to steep slopes. Everything above 3,500 m.",
+    landscapeImages: [
+      '/images/nanda-devi-landscape-1.jpg',
+      '/images/nanda-devi-landscape-2.jpg',
+      '/images/nanda-devi-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Snow Leopard',
+    sightingProb: 'rare',
+    birdingQuality: 'Mediocre',
+    animalSpecies: 14,
+    birdingSpecies: 114,
+    wildlifeProse:
+      'Snow leopard, musk deer, bharal, Himalayan tahr, serow, and black bear inhabit the park but are rarely seen. Decades of human exclusion have helped populations recover, though no comprehensive census exists. Birding is 114 species: Himalayan monal, snow partridge, golden eagle, lammergeier, koklass pheasant.',
+    wildlifeCards: [
+      { name: 'Snow Leopard', image: '/images/nanda-devi-wildlife-snow-leopard.jpg' },
+      { name: 'Bharal', image: '/images/nanda-devi-wildlife-bharal.jpg' },
+      { name: 'Himalayan Musk Deer', image: '/images/nanda-devi-wildlife-himalayan-musk-deer.jpg' },
+      { name: 'Himalayan Monal', image: '/images/nanda-devi-wildlife-himalayan-monal.jpg' },
+      { name: 'Himalayan Tahr', image: '/images/nanda-devi-wildlife-himalayan-tahr.jpg' },
+    ],
+
+    safari: {
+      types: ['walking'],
+      bookingRequirement: 'Yes',
+      coreZoneAccess: 'No access',
+      density: 'Low',
+      prose:
+        'Inner sanctuary closed. Regulated trekking in outer zones only, from Lata village via Lata Kharak to Dharansi Pass. Permits from Forest Department at Joshimath. Group sizes capped. Local guide mandatory.',
+      gates: [
+        { name: 'Lata Village', qualifier: 'sole trailhead, outer zone only' },
+      ],
+    },
+
+    networkQuality: 'None',
+    stayQuality: 'Camps',
+    entryFeeINR: 2500,
+    entryFeeForeigner: 2500,
+    practicalProse:
+      'Expedition-grade trekking. Carry all food, fuel, tents, and gear rated to minus 15°C. Acclimatise in Joshimath for 2 days minimum. Not for casual trekkers.',
+
+    connectivityProse:
+      '24 km from Joshimath to Lata village trailhead. Then 2-3 day trek to the park boundary.',
+    transport: [
+      { icon: 'plane', desc: 'Jolly Grant Airport (DED), Dehradun, 280 km. Taxi via Rishikesh, 10 hours.' },
+      { icon: 'train', desc: 'Rishikesh or Haridwar, 280 km. Bus or taxi to Joshimath, 8-9 hours.' },
+      { icon: 'bus', desc: 'GMOU buses Rishikesh to Joshimath daily. Shared taxi to Lata village, 30 minutes.' },
+      { icon: 'car', desc: 'NH58 from Delhi via Rishikesh to Joshimath (12-14 hours). Variable road beyond Chamoli.' },
+      { icon: 'foot', desc: 'Lata village to park boundary, 2-3 day trek via Lata Kharak and Dharansi Pass.' },
+    ],
+
+    photoProse:
+      'Ultra-wide lenses (14-24mm) for the peak wall at dawn. Landscape is the subject, not wildlife. Carry weather-sealed gear and spare batteries, cold kills power fast.',
   },
   {
     status: 'draft',
@@ -1036,12 +1693,105 @@ export const parks: Park[] = [
     coordinates: { lat: 21.67, lng: 79.3 },
   },
   {
-    status: 'draft',
-    id: "periyar",
-    name: "Periyar National Park",
-    state: "Kerala",
-    region: "South India",
-    coordinates: { lat: 9.47, lng: 77.17 },
+    status: 'live',
+    id: 'periyar',
+    name: 'Periyar National Park',
+    state: 'Kerala',
+    region: 'South India',
+    oneLiner: 'A lake-centred wildlife sanctuary in the spice hills of the Western Ghats',
+    description:
+      'A century-old artificial lake surrounded by tropical evergreen forest in the Cardamom Hills, where elephants wade to the water\'s edge and the air smells of pepper and cardamom. Former hunting ground of the Travancore kings, now one of India\'s most visitor-friendly wildlife reserves. The boat safari on Periyar Lake is unlike anything offered at any other Indian national park.',
+    tags: ['wildlife', 'birding', 'families'],
+    heroImage: '/images/periyar.jpg',
+    unescoStatus: false,
+    permitRequired: false,
+
+    established: 1982,
+    areaKm2: 925,
+    openMonths: [1, 12] as [number, number],
+    elevationRange: [100, 2016] as [number, number],
+    recommendedDays: 2,
+    nearestCity: 'Kumily',
+    nearestCityDistKm: 4,
+    coordinates: { lat: 9.578, lng: 77.18 },
+
+    scores: {
+      wildlife: { score: 6, desc: 'Elephants reliable, tigers present but rarely seen' },
+      scenic: { score: 8, desc: 'Lake, evergreen forest, spice plantations, Cardamom Hills' },
+      accessibility: { score: 6, desc: '4 hours from Kochi or Madurai, well-connected by road' },
+      crowdLevel: { score: 4, desc: 'Boat safaris are crowded, walking trails and rafting are quieter' },
+      remoteness: { score: 4, desc: 'Kumily/Thekkady is a busy tourist town right at the gate' },
+      infrastructure: { score: 8, desc: 'Multiple safari types, eco-tourism programmes, wide range of stays' },
+    },
+
+    bestMonths: [10, 3] as [number, number],
+    speciality: 'boat safari',
+    specialityMonths: [1, 4] as [number, number],
+    seasonProse:
+      'October to March is ideal. Cool, dry weather and good visibility across the lake. January to April is best for boat safaris as water levels drop and elephants concentrate at the lake edge. The park stays open year-round, unlike most Indian national parks. Monsoon (June to September) brings heavy rain and leeches but the forest is at its most dramatic.',
+
+    trivia: [
+      'Periyar Lake was created by the Mullaperiyar Dam, built by the British in 1895. The dead trees still standing in the water give the lake its eerie, photogenic character.',
+      'The park pioneered eco-tourism in India. Former poachers and sandalwood smugglers were rehabilitated as forest guides and patrol members through community programmes in the late 1990s.',
+      'Periyar is one of the few Indian national parks open all 12 months of the year.',
+    ],
+
+    climate: ['tropical-wet'],
+    terrain: ['hilly', 'dense-forest'],
+    landscapeProse:
+      'Tropical evergreen and semi-evergreen forest on steep, undulating terrain in the Cardamom Hills. The canopy reaches 40 metres in the deep valleys, allowing almost no sunlight to the forest floor. At the centre sits Periyar Lake, 26 km² of still water dotted with the bleached trunks of submerged trees. Marshy grasslands fringe the lake edges. Spice plantations of pepper, cardamom, and tea press against the sanctuary boundary. Higher elevations have montane grasslands and shola patches.',
+    landscapeImages: [
+      '/images/periyar-landscape-1.jpg',
+      '/images/periyar-landscape-2.jpg',
+      '/images/periyar-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Asian Elephant',
+    sightingProb: 'likely',
+    birdingQuality: 'Rich',
+    animalSpecies: 49,
+    birdingSpecies: 265,
+    wildlifeProse:
+      'Elephants are the main draw. Herds of 10 to 30 are regularly seen from the boat, wading into the lake or grazing on the marshy banks. About 1,900 elephants in the broader landscape. Tigers number around 40 to 50 but sightings from the boat are extremely rare due to dense forest cover. Gaur, sambar, wild boar, Nilgiri langur, lion-tailed macaque, and Indian giant squirrel are present. Otters are occasionally spotted in summer when water levels drop. Birding is rich at 265 species, including great hornbill, Malabar grey hornbill, Sri Lanka frogmouth, Nilgiri thrush, and Oriental darter.',
+    wildlifeCards: [
+      { name: 'Asian Elephant', image: '/images/periyar-wildlife-asian-elephant.jpg' },
+      { name: 'Gaur', image: '/images/periyar-wildlife-gaur.jpg' },
+      { name: 'Nilgiri Langur', image: '/images/periyar-wildlife-nilgiri-langur.jpg' },
+      { name: 'Lion-tailed Macaque', image: '/images/periyar-wildlife-lion-tailed-macaque.jpg' },
+      { name: 'Great Hornbill', image: '/images/periyar-wildlife-great-hornbill.jpg' },
+      { name: 'Indian Giant Squirrel', image: '/images/periyar-wildlife-indian-giant-squirrel.jpg' },
+    ],
+
+    safari: {
+      types: ['boat', 'walking'],
+      bookingRequirement: 'Yes',
+      coreZoneAccess: 'Yes',
+      density: 'High',
+      prose:
+        'The signature experience is the 2-hour boat safari on Periyar Lake, run by the Kerala Forest Department. Five departures daily. Upper deck seats offer the best views but fill up fast. Beyond the boat, the park offers guided nature walks, bamboo rafting, the Periyar Tiger Trail (overnight trek with camping), jungle night patrols, and border hikes. These eco-tourism programmes are managed by the Periyar Tiger Reserve and must be booked at the Thekkady information centre.',
+      gates: [
+        { name: 'Thekkady Gate', qualifier: 'main entry, 4 km from Kumily' },
+      ],
+    },
+
+    networkQuality: 'Decent',
+    stayQuality: 'Mid-range',
+    entryFeeINR: 25,
+    entryFeeForeigner: 300,
+    practicalProse:
+      'Leeches are a serious nuisance during and just after monsoon. Carry salt or tobacco. The boat safari is the most popular activity but not always the best for wildlife. Bamboo rafting and guided walks offer far more intimate encounters. Kumily/Thekkady has everything from backpacker hostels to luxury resorts. Spice plantation tours are an easy add-on.',
+
+    connectivityProse:
+      '4 km from Kumily/Thekkady. Kochi is 190 km west, Madurai is 140 km east.',
+    transport: [
+      { icon: 'plane', desc: 'Cochin International Airport (COK), 190 km. Taxi to Thekkady takes 4.5 hours via hill roads. Madurai Airport (IXM), 140 km, 3.5 hours.' },
+      { icon: 'train', desc: 'Kottayam station, 114 km. Well-connected to Kochi, Trivandrum, and Chennai. Then bus or taxi to Thekkady.' },
+      { icon: 'bus', desc: 'Frequent KSRTC buses from Kochi (5 hours), Kottayam (3.5 hours), and Madurai (4 hours) to Kumily.' },
+      { icon: 'car', desc: 'From Kochi via Muvattupuzha and Thodupuzha (4.5 hours). From Madurai via Theni (3.5 hours).' },
+    ],
+
+    photoProse:
+      'Early morning boat safaris in low mist with elephants at the lake edge and dead trees reflected in still water make the iconic Periyar image. A 100-400mm lens covers most situations from the boat. Bamboo rafting gets you closer to the shoreline for better compositions. The forest walks are excellent for macro and bird photography. Low light under the evergreen canopy demands fast glass.',
   },
   {
     status: 'draft',
@@ -1234,12 +1984,107 @@ export const parks: Park[] = [
     coordinates: { lat: 27.32, lng: 76.4 },
   },
   {
-    status: 'draft',
-    id: "satpura",
-    name: "Satpura National Park",
-    state: "Madhya Pradesh",
-    region: "Central India",
-    coordinates: { lat: 22.52, lng: 77.87 },
+    status: 'live',
+    id: 'satpura',
+    name: 'Satpura National Park',
+    state: 'Madhya Pradesh',
+    region: 'Central India',
+    oneLiner: 'India\'s most underrated national park, and one of the few where you can walk in the core zone',
+    description:
+      'Rugged sandstone peaks, deep gorges, and dense sal-teak forests in the Satpura Range. One of the few tiger reserves in India that offers walking safaris, canoe safaris, and cycling in the core zone. Low tourist density, high biodiversity, and a landscape that feels genuinely wild. Connects with Bori and Pachmarhi sanctuaries to form a 2,133 km² contiguous protected area.',
+    tags: ['wildlife', 'expedition', 'trekking'],
+    heroImage: '/images/satpura.jpg',
+    unescoStatus: false,
+    permitRequired: false,
+
+    established: 1981,
+    areaKm2: 524,
+    openMonths: [10, 6] as [number, number],
+    elevationRange: [300, 1352] as [number, number],
+    recommendedDays: 3,
+    nearestCity: 'Pipariya',
+    nearestCityDistKm: 55,
+    coordinates: { lat: 22.495, lng: 78.231 },
+
+    scores: {
+      wildlife: { score: 7, desc: 'Good mammal diversity, tigers present but sightings take patience' },
+      scenic: { score: 9, desc: 'Deep gorges, sandstone peaks, Denwa river, Churna plateau' },
+      accessibility: { score: 5, desc: 'Bhopal airport 170 km, then 3.5 hours by road' },
+      crowdLevel: { score: 8, desc: 'Very few visitors compared to Kanha or Bandhavgarh' },
+      remoteness: { score: 7, desc: 'Madhai village is small, limited facilities outside lodges' },
+      infrastructure: { score: 6, desc: 'Multiple safari types, good private lodges, limited government facilities' },
+    },
+
+    bestMonths: [11, 3] as [number, number],
+    speciality: 'walking safari',
+    specialityMonths: [11, 4] as [number, number],
+    seasonProse:
+      'November to March offers cool weather and excellent visibility. March to May is hotter but animals concentrate near the Denwa river and water holes. The walking safaris are available throughout the open season (October to June). Park closes July to September for monsoon. No weekly closure day.',
+
+    trivia: [
+      'Satpura is one of the very few tiger reserves in India where walking safaris are permitted in the core zone. Most Indian parks restrict visitors to vehicles.',
+      'The park sits at the biogeographic crossroads of the Satpura Range, hosting 26 species typical of the Himalayas and 42 species typical of the Western Ghats/Nilgiris.',
+      'Bori Wildlife Sanctuary, which adjoins Satpura, was India\'s first forest reserve, declared in 1861, predating any national park by 75 years.',
+    ],
+
+    climate: ['subtropical'],
+    terrain: ['mountainous', 'dense-forest'],
+    landscapeProse:
+      'Deeply folded terrain with sandstone cliffs, narrow gorges, and flat plateaux. The Denwa river winds through the western edge, its backwaters creating a calm ribbon of water ideal for canoeing. Dense sal and teak forests cover the lower hills, transitioning to bamboo thickets and scrub in the ravines. The Churna plateau, nearly flat at 1,000 m, offers panoramic views. Waterfalls appear during and just after the monsoon. The landscape is more varied and vertical than any of the other MP parks.',
+    landscapeImages: [
+      '/images/satpura-landscape-1.jpg',
+      '/images/satpura-landscape-2.jpg',
+      '/images/satpura-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Bengal Tiger',
+    sightingProb: 'possible',
+    birdingQuality: 'Exceptional',
+    animalSpecies: 52,
+    birdingSpecies: 300,
+    wildlifeProse:
+      'Around 46 tigers and over 100 leopards, but the rugged terrain and dense cover mean tiger sightings require patience. Sloth bears are a genuine highlight here, spotted more frequently than in most other MP parks. Indian giant squirrel is common in the canopy, a species not found in Kanha or Bandhavgarh. Gaur, sambar, chital, blackbuck, four-horned antelope, chinkara, and wild dog round out the mammal list. Eurasian otter and smooth-coated otter are occasionally seen along the Denwa. Birding is exceptional at 300 species, with Indian skimmer, Malabar pied hornbill, paradise flycatcher, and large winter flocks of bar-headed geese at the Tawa reservoir.',
+    wildlifeCards: [
+      { name: 'Sloth Bear', image: '/images/satpura-wildlife-sloth-bear.jpg' },
+      { name: 'Bengal Tiger', image: '/images/satpura-wildlife-bengal-tiger.jpg' },
+      { name: 'Indian Giant Squirrel', image: '/images/satpura-wildlife-indian-giant-squirrel.jpg' },
+      { name: 'Indian Leopard', image: '/images/satpura-wildlife-indian-leopard.jpg' },
+      { name: 'Indian Skimmer', image: '/images/satpura-wildlife-indian-skimmer.jpg' },
+      { name: 'Gaur', image: '/images/satpura-wildlife-gaur.jpg' },
+    ],
+
+    safari: {
+      types: ['jeep', 'walking', 'boat'],
+      bookingRequirement: 'Yes',
+      coreZoneAccess: 'Yes',
+      density: 'Low',
+      prose:
+        'Four tourism zones: Madhai (core, main entry), Churna (core, best for tigers), Parsapani (buffer, night safaris), and Pachmarhi (buffer, viewpoints and trekking). Jeep safaris, walking safaris, canoe safaris on the Denwa backwaters, boat safaris, cycling, and night safaris are all available. Walking safaris in the core zone are guided by trained naturalists and armed guards. Book through the MP Forest Department portal (mponline.gov.in).',
+      gates: [
+        { name: 'Madhai Gate', qualifier: 'main entry, all safari types' },
+        { name: 'Churna Gate', qualifier: 'core zone, best for tigers' },
+        { name: 'Parsapani Gate', qualifier: 'buffer zone, night safaris' },
+      ],
+    },
+
+    networkQuality: 'Poor',
+    stayQuality: 'Mid-range',
+    entryFeeINR: 500,
+    entryFeeForeigner: 1000,
+    practicalProse:
+      'Carry proper trekking shoes if you plan walking safaris. Mornings in December and January can be cold in the gorges. Leeches appear in early season (October to November). Cash is essential as Madhai has no ATMs. The private lodges (Denwa Backwater Escape, Reni Pani) are excellent but pricey; forest rest houses offer budget options.',
+
+    connectivityProse:
+      '55 km from Pipariya, 170 km from Bhopal. Main entry at Madhai village on the Pipariya-Bhopal road.',
+    transport: [
+      { icon: 'plane', desc: 'Raja Bhoj Airport (BHO), Bhopal, 170 km. Flights from Delhi, Mumbai, Hyderabad. Taxi to Madhai takes 3.5 hours.' },
+      { icon: 'train', desc: 'Pipariya station, 55 km. On the Delhi-Chennai main line via Itarsi. Itarsi Junction (70 km) has wider connectivity.' },
+      { icon: 'bus', desc: 'State buses from Bhopal to Pipariya or Pachmarhi. Then taxi to Madhai gate.' },
+      { icon: 'car', desc: 'From Bhopal via NH69 to Itarsi, then state highway to Madhai (3.5 hours). From Nagpur via NH44 (5 hours).' },
+    ],
+
+    photoProse:
+      'The Denwa backwaters at dawn during a canoe safari offer unique eye-level bird photography unavailable at any other Indian park. Walking safaris give ground-level perspective on forest textures and small life. A 200-400mm lens handles most situations. For Indian skimmer and other waterbirds at Tawa, a 500-600mm lens is worth having. The gorges and sandstone formations make strong landscape subjects.',
   },
   {
     status: 'draft',

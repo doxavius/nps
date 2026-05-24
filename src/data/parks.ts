@@ -1348,12 +1348,108 @@ export const parks: Park[] = [
     coordinates: { lat: 33.46, lng: 76.02 },
   },
   {
-    status: 'draft',
-    id: "kudremukh",
-    name: "Kudremukh National Park",
-    state: "Karnataka",
-    region: "South India",
-    coordinates: { lat: 13.25, lng: 75.25 },
+    status: 'live',
+    id: 'kudremukh',
+    name: 'Kudremukh National Park',
+    state: 'Karnataka',
+    region: 'South India',
+    oneLiner: 'Rolling shola grasslands in the Western Ghats where three major rivers are born',
+    description:
+      "600 km² of wet evergreen forest and high-altitude grassland across the Chikmagalur-Dakshina Kannada ridge. Named after a peak that looks like a horse's face in Kannada. Three rivers originate here: Tunga, Bhadra, and Nethravathi. An iron ore mine operated inside the park for 30 years until courts shut it down in 2005. Part of the Western Ghats UNESCO World Heritage Site.",
+    tags: ['trekking', 'birding', 'expedition'],
+    heroImage: '/images/kudremukh.jpg',
+    unescoStatus: true,
+    permitRequired: true,
+    permitDescription:
+      'Trekking permit required from the Reserve Forest Office in Kudremukh town or Kalasa.',
+
+    established: 1987,
+    areaKm2: 600,
+    openMonths: [10, 5] as [number, number],
+    elevationRange: [134, 1894] as [number, number],
+    recommendedDays: 2,
+    nearestCity: 'Kalasa',
+    nearestCityDistKm: 20,
+    coordinates: { lat: 13.25, lng: 75.2 },
+
+    scores: {
+      wildlife: { score: 5, desc: 'Rich mammal list but dense forest limits sightings' },
+      scenic: { score: 9, desc: 'Rolling green grasslands, mist-covered peaks, waterfalls' },
+      accessibility: { score: 5, desc: 'Mangalore 100 km, Bengaluru 350 km, winding ghat roads' },
+      crowdLevel: { score: 6, desc: 'Trek limited to 50 people per day' },
+      remoteness: { score: 6, desc: 'Small towns nearby, coffee plantations on the boundary' },
+      infrastructure: { score: 4, desc: 'Trekking permits, basic homestays, no safari system' },
+    },
+
+    bestMonths: [10, 2] as [number, number],
+    speciality: 'shola grassland treks',
+    specialityMonths: [10, 1] as [number, number],
+    seasonProse:
+      'October to February is ideal. Post-monsoon greenery is peak, mist lifts by mid-morning, and trails are firm. Monsoon (June to September) brings extreme rain but stunning green landscapes. The park may restrict trekking during heavy rain. No camping allowed inside.',
+
+    trivia: [
+      'Three major Karnataka rivers, Tunga, Bhadra, and Nethravathi, originate from Gangamoola hill inside the park.',
+      'An iron ore mine (KIOCL) operated inside the park from 1976 to 2005 until the Supreme Court ordered it shut.',
+      'At 600 km², it is the second-largest tropical wet evergreen protected area in the Western Ghats.',
+    ],
+
+    climate: ['tropical-wet'],
+    terrain: ['mountainous', 'dense-forest'],
+    landscapeProse:
+      "Rolling hills carpeted in shola grassland above 1,200 m, dropping into dense evergreen forest in the valleys. Streams everywhere, converging into the Tunga and Bhadra rivers. Mist rolls across the ridgelines most mornings. Kadambi and Hanumangundi waterfalls break through rock faces. Coffee and tea plantations line the park's northern and eastern edges. From the Kudremukh peak, clear days reveal the Arabian Sea to the west.",
+    landscapeImages: [
+      '/images/kudremukh-landscape-1.jpg',
+      '/images/kudremukh-landscape-2.jpg',
+      '/images/kudremukh-landscape-3.jpg',
+    ],
+
+    flagshipFauna: 'Lion-tailed Macaque',
+    sightingProb: 'possible',
+    birdingQuality: 'Good',
+    animalSpecies: null,
+    birdingSpecies: 195,
+    wildlifeProse:
+      'Lion-tailed macaques inhabit the lower evergreen canopy but sightings require patience in dense forest. Tiger, leopard, dhole, gaur, sambar, sloth bear, and Malabar giant squirrel are present. The Malabar civet, possibly the rarest small carnivore in India, has been historically recorded here but may be functionally extinct. Birding is good at 195 species, with Malabar trogon, Malabar whistling thrush, great pied hornbill, Nilgiri wood pigeon, and Ceylon frogmouth.',
+    wildlifeCards: [
+      { name: 'Lion-tailed Macaque', image: '/images/kudremukh-wildlife-lion-tailed-macaque.jpg' },
+      { name: 'Gaur', image: '/images/kudremukh-wildlife-gaur.jpg' },
+      { name: 'Malabar Giant Squirrel', image: '/images/kudremukh-wildlife-malabar-giant-squirrel.jpg' },
+      { name: 'Malabar Trogon', image: '/images/kudremukh-wildlife-malabar-trogon.jpg' },
+      { name: 'Dhole', image: '/images/kudremukh-wildlife-dhole.jpg' },
+    ],
+
+    safari: {
+      types: ['walking'],
+      bookingRequirement: 'Yes',
+      coreZoneAccess: 'Yes',
+      density: 'Low',
+      prose:
+        'No vehicle safaris. Trekking only. Kudremukh Peak trek (9 km from forest checkpost at Mullodi) is the main route. Day treks only, no camping. Permit and mandatory guide from the forest office in Kudremukh town. Entry limited to 50 people per day. Sunrise to sunset.',
+      gates: [
+        { name: 'Mullodi', qualifier: 'Kudremukh Peak trek start' },
+        { name: 'Kalasa' },
+      ],
+    },
+
+    networkQuality: 'Poor',
+    stayQuality: 'Homestays',
+    entryFeeINR: 200,
+    entryFeeForeigner: 1000,
+    practicalProse:
+      'Carry rain gear even in dry season. Leeches are common October to December. No food inside the park. Sturdy trekking shoes essential for the slippery grassland trails. Homestays in Kalasa and Horanadu are the best accommodation options.',
+
+    connectivityProse:
+      '20 km from Kalasa, 100 km from Mangalore, 350 km from Bengaluru. Trek starts at Mullodi.',
+    transport: [
+      { icon: 'plane', desc: 'Mangalore Airport (IXE), 100 km. Taxi via Moodabidri to Kalasa, 3 hours.' },
+      { icon: 'train', desc: 'No direct rail. Mangalore Junction (100 km) or Hassan (150 km). Then taxi or bus.' },
+      { icon: 'bus', desc: 'KSRTC buses from Mangalore and Bengaluru to Kalasa or Horanadu. Infrequent schedules.' },
+      { icon: 'car', desc: 'From Bengaluru via Hassan and Kalasa (7-8 hours). From Mangalore via Moodabidri (3 hours).' },
+      { icon: 'foot', desc: 'Mullodi checkpost to Kudremukh Peak, 9 km trek, 5-6 hours return.' },
+    ],
+
+    photoProse:
+      "Wide-angle lenses for the grassland ridgelines and mist. The rolling green hills in post-monsoon light are Kudremukh's signature. Wildlife photography is limited by dense canopy. Best light is early morning before clouds build.",
   },
   {
     status: 'draft',

@@ -1,0 +1,115 @@
+{
+  "id": "silent-valley",
+  "name": "Silent Valley National Park",
+  "state": "Kerala",
+  "region": "South India",
+  "oneLiner": "One of India's last undisturbed tropical rainforests, saved by a protest movement",
+  "description": "Undisturbed tropical evergreen rainforest in the Nilgiri Hills, named for the eerie absence of cicada calls. Saved from a hydroelectric dam by India's fiercest environmental campaign in the 1970s. Core of the Nilgiri Biosphere Reserve. Holds the largest population of lion-tailed macaques, one of the most endangered primates on Earth.",
+  "tags": ["wildlife", "birding", "offbeat"],
+  "heroImage": "/images/silent-valley.jpg",
+  "unescoStatus": true,
+  "permitRequired": false,
+
+  "established": 1984,
+  "areaKm2": 90,
+  "openMonths": [1, 12],
+  "elevationRange": [900, 2383],
+  "recommendedDays": 1,
+  "nearestCity": "Mannarkkad",
+  "nearestCityDistKm": 40,
+  "coordinates": { "lat": 11.133, "lng": 76.467 },
+
+  "scores": [
+    {
+      "category": "wildlife",
+      "value": 6,
+      "desc": "Lion-tailed macaques reliable, larger mammals elusive"
+    },
+    {
+      "category": "scenic",
+      "value": 8,
+      "desc": "Dense rainforest canopy, mist, Kunthipuzha river valley"
+    },
+    {
+      "category": "accessibility",
+      "value": 5,
+      "desc": "Coimbatore airport 120 km, then winding hill roads"
+    },
+    {
+      "category": "crowdLevel",
+      "value": 7,
+      "desc": "Visitor numbers actively restricted by forest department"
+    },
+    {
+      "category": "remoteness",
+      "value": 6,
+      "desc": "Mukkali is a small settlement, Mannarkkad 40 km"
+    },
+    {
+      "category": "infrastructure",
+      "value": 5,
+      "desc": "Guided jeep trips, nature trail, basic visitor centre"
+    }
+  ],
+
+  "bestMonths": [12, 4],
+  "speciality": "lion-tailed macaque",
+  "specialityMonths": [12, 3],
+  "seasonProse": "December to April is best. Post-monsoon forest is lush, humidity is manageable, and macaque troops are active and visible. Monsoon (June to September) brings 3,000-4,500 mm of rain and difficult trail conditions. Open year-round but entry closes at 1 PM daily.",
+
+  "trivia": [
+    "Named for the near-absence of cicada noise. Theories range from altitude to dense canopy blocking wind vibrations.",
+    "The 'Save Silent Valley' campaign (1973-1985) stopped a hydroelectric dam and became a landmark in Indian environmental history.",
+    "Contains 1,000 flowering plant species, 108 orchid species, and 500 butterfly and moth species in just 90 km²."
+  ],
+
+  "climate": ["tropical-wet"],
+  "terrain": ["mountainous", "dense-forest"],
+  "landscapeProse": "Unbroken tropical evergreen canopy from 900 m up to the Anginda peak at 2,383 m. Steep escarpments and narrow ridges covered in moss, ferns, and epiphytes. The Kunthipuzha river runs through the valley, clear and cold. In monsoon, waterfalls appear on every rock face. Mist sits in the valleys most mornings and burns off by noon. The forest floor is dark even at midday.",
+  "landscapeImages": [
+    "/images/silent-valley-landscape-1.jpg",
+    "/images/silent-valley-landscape-2.jpg",
+    "/images/silent-valley-landscape-3.jpg"
+  ],
+
+  "flagshipFauna": "Lion-tailed Macaque",
+  "sightingProb": "likely",
+  "birdingQuality": "Good",
+  "animalSpecies": 34,
+  "birdingSpecies": 211,
+  "wildlifeProse": "Lion-tailed macaque troops swing through the mid-canopy of Cullenia and Palaquium trees, their silver manes visible against dark fur. Largest population of this species anywhere. Nilgiri langur, Malabar giant squirrel, and Nilgiri marten are regularly spotted. Elephants, gaur, tigers, and leopards are present but rarely seen in the dense cover. Birding is good at 211 species, with great Indian hornbill, Ceylon frogmouth, Nilgiri wood pigeon, and Malabar parakeet among the highlights.",
+  "wildlifeCards": [
+    { "name": "Lion-tailed Macaque", "image": "/images/silent-valley-wildlife-lion-tailed-macaque.jpg" },
+    { "name": "Nilgiri Langur", "image": "/images/silent-valley-wildlife-nilgiri-langur.jpg" },
+    { "name": "Malabar Giant Squirrel", "image": "/images/silent-valley-wildlife-malabar-giant-squirrel.jpg" },
+    { "name": "Great Indian Hornbill", "image": "/images/silent-valley-wildlife-great-indian-hornbill.jpg" },
+    { "name": "Nilgiri Marten", "image": "/images/silent-valley-wildlife-nilgiri-marten.jpg" }
+  ],
+
+  "safari": {
+    "types": ["jeep", "walking"],
+    "bookingRequirement": "Yes",
+    "coreZoneAccess": "Yes",
+    "density": "Low",
+    "prose": "Jeep safari from Mukkali gate to Sairandhri visitor centre, 22 km inside the park. A 1 km guided nature trail from Sairandhri to the Kunthipuzha river. Entry 8 AM to 1 PM, exit by 5 PM. Forest guard accompanies every group. Permission from the Mukkali or Mannarkkad wildlife office.",
+    "gates": [
+      { "name": "Mukkali", "qualifier": "sole entry point" }
+    ]
+  },
+
+  "networkQuality": "None",
+  "stayQuality": "Budget",
+  "entryFeeINR": 50,
+  "entryFeeForeigner": null,
+  "practicalProse": "Carry rain gear year-round. Leeches are common in and after monsoon. No food inside the park. Cash only at Mukkali. Sturdy shoes for the nature trail. Photography in dense canopy demands fast glass.",
+
+  "connectivityProse": "40 km from Mannarkkad, 55 km from Palakkad. Sole entry at Mukkali gate.",
+  "transport": [
+    { "icon": "plane", "desc": "Coimbatore Airport (CJB), 120 km. Taxi via Anakkatty to Mukkali, 3 hours." },
+    { "icon": "train", "desc": "Palakkad Junction, 55 km. Well-connected to Chennai, Kochi, Delhi. Taxi to Mukkali." },
+    { "icon": "bus", "desc": "KSRTC buses from Palakkad to Mannarkkad (1 hour). Local bus to Mukkali." },
+    { "icon": "car", "desc": "From Coimbatore via Anakkatty (90 km, 2.5 hours). From Palakkad via Mannarkkad (55 km)." }
+  ],
+
+  "photoProse": "Dense canopy means low light. Fast lenses (f/2.8) and high ISO are essential. Lion-tailed macaques in the mid-canopy need a 300-400mm lens aimed upward. The Kunthipuzha river is the best landscape subject."
+}

@@ -1,5 +1,6 @@
 export const MAP_CONFIG = {
   style: 'mapbox://styles/mapbox/standard',
+  satelliteStyle: 'mapbox://styles/mapbox/standard-satellite',
   initialViewState: {
     longitude: 82.5,
     latitude: 22.5,

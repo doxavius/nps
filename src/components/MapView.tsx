@@ -12,6 +12,7 @@ import { MAP_CONFIG } from '@/config/map';
 import { Park } from '@/types/park';
 import { ParkMarker } from './ParkMarker';
 import { Sidebar } from './Sidebar';
+import { MapStyleToggle } from './MapStyleToggle';
 
 const SIDEBAR_WIDTH_PX = 448;
 const TERRAIN_3D_ZOOM = 10.5;
@@ -25,9 +26,13 @@ export function MapView() {
   const orbitRafRef = useRef<number | null>(null);
   const orbitStartTimeoutRef = useRef<number | null>(null);
   const cancelPendingTerrainOffRef = useRef<(() => void) | null>(null);
+  // Terrain ref so the style.load listener (registered once) can re-attach
+  // terrain after a satellite/map style swap without going stale.
+  const terrainOnRef = useRef<boolean>(false);
   const [zoom, setZoom] = useState<number>(MAP_CONFIG.initialViewState.zoom);
   const [selectedParkId, setSelectedParkId] = useState<string | null>(null);
   const [displayPark, setDisplayPark] = useState<Park | null>(null);
+  const [isSatellite, setIsSatellite] = useState<boolean>(false);
 
   const stopOrbit = useCallback(() => {
     if (orbitRafRef.current != null) {
@@ -55,7 +60,10 @@ export function MapView() {
     orbitRafRef.current = requestAnimationFrame(tick);
   }, []);
 
-  const handleLoad = useCallback(() => {
+  // Applies our basemap config + DEM source + fog. Runs on initial load AND
+  // on every style swap (e.g. Map ↔ Satellite), since switching styles wipes
+  // sources, terrain, and config properties.
+  const applyBasemap = useCallback(() => {
     const map = mapRef.current?.getMap();
     if (!map) return;
     const cfg = MAP_CONFIG.standardConfig;
@@ -63,7 +71,7 @@ export function MapView() {
       try {
         map.setConfigProperty('basemap', k, v as never);
       } catch {
-        // Some properties may not be available depending on style version; ignore.
+        // Some properties don't apply on satellite (e.g. colorLand); ignore.
       }
     };
     apply('theme', cfg.theme);
@@ -78,7 +86,6 @@ export function MapView() {
     apply('showRoadLabels', cfg.showRoadLabels);
     apply('showPlaceLabels', cfg.showPlaceLabels);
 
-    // DEM source for 3D terrain. Loaded once; setTerrain attaches/detaches it.
     if (!map.getSource('mapbox-dem')) {
       map.addSource('mapbox-dem', {
         type: 'raster-dem',
@@ -98,7 +105,19 @@ export function MapView() {
       'space-color': '#FAF7F2',
       'star-intensity': 0,
     });
+
+    // Re-attach terrain after a style swap if we were mid-orbit on a park.
+    if (terrainOnRef.current) {
+      map.setTerrain({ source: 'mapbox-dem', exaggeration: TERRAIN_3D_EXAGGERATION });
+    }
   }, []);
+
+  const handleLoad = useCallback(() => {
+    applyBasemap();
+    const map = mapRef.current?.getMap();
+    if (!map) return;
+    map.on('style.load', applyBasemap);
+  }, [applyBasemap]);
 
   // Clicking empty map area closes the sidebar. Park markers stop propagation,
   // so this only fires on background clicks.
@@ -124,6 +143,7 @@ export function MapView() {
       cancelPendingTerrainOff();
       const handler = () => {
         map.setTerrain(null);
+        terrainOnRef.current = false;
         cancelPendingTerrainOffRef.current = null;
       };
       map.once('moveend', handler);
@@ -146,6 +166,7 @@ export function MapView() {
       } else {
         cancelPendingTerrainOff();
         map.setTerrain(null);
+        terrainOnRef.current = false;
       }
       return;
     }
@@ -158,6 +179,7 @@ export function MapView() {
     stopOrbit();
     cancelPendingTerrainOff();
     map.setTerrain({ source: 'mapbox-dem', exaggeration: TERRAIN_3D_EXAGGERATION });
+    terrainOnRef.current = true;
     map.flyTo({
       center: [p.coordinates.lng, p.coordinates.lat],
       zoom: TERRAIN_3D_ZOOM,
@@ -209,10 +231,11 @@ export function MapView() {
 
   return (
     <div className="relative h-full w-full">
+      <MapStyleToggle isSatellite={isSatellite} onChange={setIsSatellite} />
       <MapboxMap
         ref={mapRef}
         mapboxAccessToken={token}
-        mapStyle={MAP_CONFIG.style}
+        mapStyle={isSatellite ? MAP_CONFIG.satelliteStyle : MAP_CONFIG.style}
         initialViewState={MAP_CONFIG.initialViewState}
         maxBounds={[
           [40, -10],

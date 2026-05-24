@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "enrich": "tsx scripts/enrich-parks.ts"
+    "enrich": "tsx scripts/enrich-parks.ts",
+    "fetch-boundaries": "tsx scripts/fetch-boundaries.ts"
   },
   "dependencies": {
     "mapbox-gl": "^3.22.0",
